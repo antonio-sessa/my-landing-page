@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { GlobalStyle } from "../components/GlobalStyle";
-import Script from 'next/script'
 import TagManager from "react-gtm-module"
 
 const tagManagerArgs = {
