@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /media/
+
+Sitemap: https://antoniosessa.com/sitemap.xml
