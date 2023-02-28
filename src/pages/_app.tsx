@@ -42,13 +42,6 @@ export default function App({ Component, pageProps }) {
         data-blockingmode="auto"
         type="text/javascript"
       ></Script>
-
-      <Script
-        id="CookieDeclaration"
-        src="https://consent.cookiebot.com/b98e1d1b-1839-4473-b290-41f8d4c11788/cd.js"
-        type="text/javascript"
-        async
-      ></Script>
     </>
   );
 }
