@@ -21,13 +21,13 @@ export default function App({ Component, pageProps }) {
           gtag('set', 'url_passthrough', true);
 
           gtag('js', new Date());
-          gtag('config', 'GTM-5RR53JT');
+          gtag('config', 'GT-MR458Z9');
         `}
       </Script>
 
       <Script
         data-cookieconsent="ignore"
-        src="https://www.googletagmanager.com/gtag/js?id=GTM-5RR53JT"
+        src="https://www.googletagmanager.com/gtag/js?id=GT-MR458Z9"
         strategy="afterInteractive"
       />
 
