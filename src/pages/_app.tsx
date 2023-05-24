@@ -9,14 +9,6 @@ export default function App({ Component, pageProps }) {
       <Component {...pageProps} />
 
       <Script
-        id="Cookiebot"
-        src="https://consent.cookiebot.com/uc.js"
-        data-cbid="b98e1d1b-1839-4473-b290-41f8d4c11788"
-        data-blockingmode="auto"
-        type="text/javascript"
-      ></Script>
-
-      <Script
         data-cookieconsent="ignore"
         id="google-analytics"
         strategy="afterInteractive"
@@ -38,6 +30,12 @@ export default function App({ Component, pageProps }) {
         src="https://www.googletagmanager.com/gtag/js?id=GTM-5RR53JT"
         strategy="afterInteractive"
       />
+
+      <Script
+        id="cookieyes"
+        type="text/javascript"
+        src="https://cdn-cookieyes.com/client_data/dc0af3ef68e117d368e4848a/script.js"
+      ></Script>
     </>
   );
 }
