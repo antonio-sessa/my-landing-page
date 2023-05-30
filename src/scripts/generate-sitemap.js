@@ -13,9 +13,7 @@ function addPage(page) {
   return `
   <url>
     <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
-    <lastmod>${`${buildTime.getFullYear()}-${
-      buildTime.getMonth() + 1
-    }-${buildTime.getDate()}`}</lastmod>
+    <lastmod>${`${buildTime.toISOString()}`}</lastmod>
   </url>`;
 }
 
