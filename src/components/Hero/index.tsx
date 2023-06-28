@@ -114,7 +114,7 @@ export const Hero = () => {
     <>
       <HeroSection>
         <Title>Antonio Sessa</Title>
-        <SubTitle>QA Specialist - Photographer - Curious about life</SubTitle>
+        <SubTitle>QA Engineer - Photographer - Curious about life</SubTitle>
       </HeroSection>
     </>
   );
