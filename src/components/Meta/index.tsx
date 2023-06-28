@@ -4,14 +4,10 @@ import React from "react";
 export const Meta = () => {
   return (
     <>
-      <title>
-        Antonio Sessa - Passionate Quality Assurance Professional and
-        Photographer in Milan, IT
-      </title>
+      <title>Antonio Sessa - Passionate QA Engineer and Photographer</title>
       <meta
         name="description"
-        content="Antonio Sessa. Discover how my passion for Quality Assurance drives dynamic teams, fosters creativity, and delivers exceptional results.
-        Experience the captivating reality I bring to life through my photography!
+        content="Discover how my passion for Quality Assurance drives dynamic teams, fosters creativity, and delivers exceptional results.
         Currently based in Milan, IT."
       />
 
