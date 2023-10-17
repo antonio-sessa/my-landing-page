@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import Link from "next/link";
 import styled from "styled-components";
 import { Racing_Sans_One } from "next/font/google";
