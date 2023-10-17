@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import Link from "next/link";
 import styled from "styled-components";
-import { Racing_Sans_One } from "@next/font/google";
+import { Racing_Sans_One } from "next/font/google";
 import Image from "next/image";
 
 export const racingSansOne = Racing_Sans_One({
