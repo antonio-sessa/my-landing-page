@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import styled from "styled-components";
-import { Racing_Sans_One } from "@next/font/google";
+import { Racing_Sans_One } from "next/font/google";
 
 export const racingSansOne = Racing_Sans_One({
   weight: "400",
