@@ -35,7 +35,7 @@ const links = [
   },
   {
     name: "CV",
-    url: "./media/antoniosessa_CV.pdf",
+    url: "/cv",
     image: `${imageRootPath}/CV.png`,
   },
   {
