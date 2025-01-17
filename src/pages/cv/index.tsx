@@ -1,27 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import CV from "../../components/CV";
 
-const CVPath = "/media/antoniosessa_CV.pdf";
+const PageWrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  color: #f0f0f0;
+`;
 
-const CVPage = () => {
+const CVPage: React.FC = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <object data={CVPath} type="application/pdf" width="100%" height="100%">
-        <p>
-          Your browser does not support viewing PDFs. Please{" "}
-          <a href={CVPath} download>
-            download the CV
-          </a>{" "}
-          to view it.
-        </p>
-      </object>
-    </div>
+    <PageWrapper>
+      <CV isSmallScreen={isSmallScreen} />
+    </PageWrapper>
   );
 };
 
