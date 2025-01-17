@@ -64,9 +64,11 @@ interface CVProps {
 const CV: React.FC<CVProps> = ({ isSmallScreen }) => {
   return (
     <>
-      <PDFViewerWrapper>
-        <PDFViewer data={CVPath} type="application/pdf" />
-      </PDFViewerWrapper>
+      {!isSmallScreen && (
+        <PDFViewerWrapper>
+          <PDFViewer data={CVPath} type="application/pdf" />
+        </PDFViewerWrapper>
+      )}
 
       {isSmallScreen && (
         <Disclaimer>
