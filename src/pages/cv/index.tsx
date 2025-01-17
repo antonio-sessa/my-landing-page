@@ -14,10 +14,21 @@ const PageWrapper = styled.div`
 
 const CVPage: React.FC = () => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
+      setIsDesktop(window.innerWidth >= 1024); // Consider desktop devices to have width 1024px or higher
+      setIsSmallScreen(isSmallDevice());
+    };
+
+    const isSmallDevice = () => {
+      const screenWidth = window.innerWidth;
+      const screenHeight = window.innerHeight;
+      const ppi = window.devicePixelRatio * 160; // Approximation of PPI based on device pixel ratio
+      const diagonalInches =
+        Math.sqrt(screenWidth ** 2 + screenHeight ** 2) / ppi;
+      return diagonalInches < 6; // Consider small screen if diagonal is less than 6 inches
     };
 
     handleResize();
@@ -30,7 +41,7 @@ const CVPage: React.FC = () => {
 
   return (
     <PageWrapper>
-      <CV isSmallScreen={isSmallScreen} />
+      <CV isSmallScreen={!isDesktop && isSmallScreen} />
     </PageWrapper>
   );
 };
