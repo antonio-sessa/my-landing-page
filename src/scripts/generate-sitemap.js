@@ -8,7 +8,6 @@ async function generateSitemap() {
     "!src/pages/api",
   ]);
 
-  const buildTime = new Date();
   function addPage(page) {
     const path = page
       .replace("src/pages", "")
@@ -19,7 +18,7 @@ async function generateSitemap() {
     return `
     <url>
       <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
-      <lastmod>${`${buildTime.toISOString()}`}</lastmod>
+      <lastmod>${`${new Date().toISOString()}`}</lastmod>
     </url>`;
   }
 
