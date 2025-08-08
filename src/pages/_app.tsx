@@ -1,19 +1,18 @@
 import Script from "next/script";
-import React, { useEffect } from "react";
 import { GlobalStyle } from "../components/GlobalStyle";
 
 export default function App({ Component, pageProps }) {
-  return (
-    <>
-      <GlobalStyle />
-      <Component {...pageProps} />
+	return (
+		<>
+			<GlobalStyle />
+			<Component {...pageProps} />
 
-      <Script
-        data-cookieconsent="ignore"
-        id="google-analytics"
-        strategy="afterInteractive"
-      >
-        {`
+			<Script
+				data-cookieconsent="ignore"
+				id="google-analytics"
+				strategy="afterInteractive"
+			>
+				{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('consent', 'default', {ad_storage:'denied', analytics_storage:'denied'});
@@ -23,19 +22,19 @@ export default function App({ Component, pageProps }) {
           gtag('js', new Date());
           gtag('config', 'GT-MR458Z9');
         `}
-      </Script>
+			</Script>
 
-      <Script
-        data-cookieconsent="ignore"
-        src="https://www.googletagmanager.com/gtag/js?id=GT-MR458Z9"
-        strategy="afterInteractive"
-      />
+			<Script
+				data-cookieconsent="ignore"
+				src="https://www.googletagmanager.com/gtag/js?id=GT-MR458Z9"
+				strategy="afterInteractive"
+			/>
 
-      <Script
-        id="cookieyes"
-        type="text/javascript"
-        src="https://cdn-cookieyes.com/client_data/dc0af3ef68e117d368e4848a/script.js"
-      ></Script>
-    </>
-  );
+			<Script
+				id="cookieyes"
+				type="text/javascript"
+				src="https://cdn-cookieyes.com/client_data/dc0af3ef68e117d368e4848a/script.js"
+			></Script>
+		</>
+	);
 }

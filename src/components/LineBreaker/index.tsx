@@ -1,5 +1,3 @@
-import Head from "next/head";
-import React from "react";
 import styled from "styled-components";
 
 const Line = styled.section`
@@ -28,9 +26,5 @@ const Line = styled.section`
 `;
 
 export const LineBreaker = () => {
-  return (
-    <>
-      <Line />
-    </>
-  );
+	return <Line />;
 };

@@ -1,9 +1,9 @@
-import { createGlobalStyle } from "styled-components";
 import { Roboto } from "next/font/google";
+import { createGlobalStyle } from "styled-components";
 
 export const roboto = Roboto({
-  weight: "400",
-  subsets: ["latin"],
+	weight: "400",
+	subsets: ["latin"],
 });
 
 export const GlobalStyle = createGlobalStyle`

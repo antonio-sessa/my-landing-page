@@ -1,11 +1,9 @@
-import Head from "next/head";
-import React from "react";
-import styled from "styled-components";
 import { Racing_Sans_One } from "next/font/google";
+import styled from "styled-components";
 
 export const racingSansOne = Racing_Sans_One({
-  weight: "400",
-  subsets: ["latin"],
+	weight: "400",
+	subsets: ["latin"],
 });
 
 const HeroSection = styled.section`
@@ -110,12 +108,12 @@ const SubTitle = styled.h2`
 `;
 
 export const Hero = () => {
-  return (
-    <>
-      <HeroSection>
-        <Title>Antonio Sessa</Title>
-        <SubTitle>Senior QA Engineer - Photographer - Curious about life</SubTitle>
-      </HeroSection>
-    </>
-  );
+	return (
+		<HeroSection>
+			<Title>Antonio Sessa</Title>
+			<SubTitle>
+				Senior QA Engineer - Photographer - Curious about life
+			</SubTitle>
+		</HeroSection>
+	);
 };
