@@ -15,25 +15,25 @@ export const Main = styled.main`
   max-height: 100vh;
 
   text-align: center;
-  padding-top: 70vh;
+  padding-top: 70vh;  /* Desktop default */
 
+  /* Tablet and small laptop screens */
+  @media (max-width: 1120px) {
+    padding-top: 62vh;
+  }
+
+  /* Tablet Landscape or sm-wide phones */
+  @media (max-width: 1120px) and (orientation: landscape) {
+    padding-top: 45vh;
+  }
+
+  /* Mobile portrait */
   @media (max-width: 700px) and (orientation: portrait) {
-    /* Mobile portrait */
-    padding-top: 65vh;
+    padding-top: 55vh;
   }
 
+  /* Mobile landscape: even less top padding */
   @media (max-width: 700px) and (orientation: landscape) {
-    /* Mobile landscape */
-    padding-top: 50vh;
-  }
-
-  @media (min-width: 701px) and (max-width: 1120px) and (orientation: portrait) {
-    /* Tablet portrait */
-    padding-top: 65vh;
-  }
-
-  @media (min-width: 701px) and (max-width: 1120px) and (orientation: landscape) {
-    /* Tablet landscape */
-    padding-top: 50vh;
+    padding-top: 34vh;
   }
 `;
