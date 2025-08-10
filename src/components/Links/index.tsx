@@ -6,33 +6,33 @@ export const racingSansOne = Racing_Sans_One({
 	subsets: ["latin"],
 });
 
-const imageRootPath = "/media/images/links";
+const imageRootPath = "/media/images/logos";
 
 const links = [
 	{
 		name: "Linkedin",
 		url: "https://www.linkedin.com/in/antoniosessa/",
-		image: `${imageRootPath}/Linkedin.png`,
+		image: `${imageRootPath}/linkedin.png`,
 	},
 	{
 		name: "GitHub",
 		url: "https://github.com/antonio-sessa",
-		image: `${imageRootPath}/GitHub.png`,
+		image: `${imageRootPath}/github.png`,
 	},
 	{
 		name: "Unsplash",
 		url: "https://unsplash.com/@antony_sex",
-		image: `${imageRootPath}/Unsplash.png`,
+		image: `${imageRootPath}/unsplash.png`,
 	},
 	{
 		name: "Instagram",
 		url: "https://www.instagram.com/antony_sex/",
-		image: `${imageRootPath}/Instagram.png`,
+		image: `${imageRootPath}/instagram.png`,
 	},
 	{
 		name: "Unstoppable Domains",
 		url: "https://ud.me/antoniosessa.nft",
-		image: `${imageRootPath}/Unstoppable Domains.png`,
+		image: `${imageRootPath}/unstoppable-domains.png`,
 	},
 ];
 

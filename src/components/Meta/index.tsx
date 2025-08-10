@@ -25,7 +25,7 @@ export const Meta = () => {
 			/>
 			<meta
 				property="og:image"
-				content="https://antoniosessa.com/media/images/landing_scaled.jpg"
+				content="https://antoniosessa.com/media/images/landing-scaled.jpg"
 			/>
 			<meta property="og:url" content="https://antoniosessa.com" />
 			<meta property="og:type" content="website" />
