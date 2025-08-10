@@ -2,9 +2,8 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const LogoWrapper = styled.div`
-  width: auto;
   height: 1.8rem;
-  aspect-ratio: 4 / 1;
+  max-width: 7rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -21,7 +20,7 @@ const LogoLink = styled.a.attrs(() => ({
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  width: 100%;
+  width: auto;
 `;
 
 export type CompanyLogoProps = {
@@ -38,7 +37,7 @@ export const CompanyLogo = ({
 	alt,
 	href,
 	ariaLabel,
-	width = 112, // ~4:1 ratio
+	width = 112,
 	height = 28,
 }: CompanyLogoProps) => {
 	return (
@@ -50,7 +49,12 @@ export const CompanyLogo = ({
 					alt={alt}
 					width={width}
 					height={height}
-					style={{ objectFit: "contain" }}
+					style={{
+						height: "100%",
+						width: "100%",
+						objectFit: "contain",
+						display: "block",
+					}}
 					unoptimized={false}
 				/>
 			</LogoLink>
