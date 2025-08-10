@@ -36,9 +36,9 @@ const EducationGrid = styled.div`
   }
 `;
 
-const EducationCard = styled.div<{ cardBackground?: string }>`
-  background-color: ${({ cardBackground }) =>
-		cardBackground ?? "rgba(31, 41, 55, 0.85)"};
+const EducationCard = styled.div<{ $cardBackground?: string }>`
+  background-color: ${({ $cardBackground }) =>
+		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
   border-radius: 0.5rem;
   padding: 1.5rem;
   text-align: center;
@@ -64,7 +64,7 @@ export const Education = ({ cardBackground }: EducationProps) => {
 				<SectionTitle>Education</SectionTitle>
 
 				<EducationGrid>
-					<EducationCard cardBackground={cardBackground}>
+					<EducationCard $cardBackground={cardBackground}>
 						<Icon>🎓</Icon>
 						<CardTitle>Master's Degree in Computer Engineering</CardTitle>
 						<CardSubtitle>University of Salerno</CardSubtitle>
@@ -78,7 +78,7 @@ export const Education = ({ cardBackground }: EducationProps) => {
 						</Description>
 					</EducationCard>
 
-					<EducationCard cardBackground={cardBackground}>
+					<EducationCard $cardBackground={cardBackground}>
 						<Icon>🎓</Icon>
 						<CardTitle>Bachelor's Degree in Computer Engineering</CardTitle>
 						<CardSubtitle>University of Salerno</CardSubtitle>

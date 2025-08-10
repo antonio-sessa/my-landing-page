@@ -6,22 +6,22 @@ type BadgeGroupProps = {
 	align?: "left" | "center" | "right";
 };
 
-const Wrapper = styled.div<{ align?: "left" | "center" | "right" }>`
+const Wrapper = styled.div<{ $align?: "left" | "center" | "right" }>`
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 0.5rem;
-  justify-content: ${({ align }) =>
-		align === "left"
+  justify-content: ${({ $align }) =>
+		$align === "left"
 			? "flex-start"
-			: align === "right"
+			: $align === "right"
 				? "flex-end"
 				: "center"};
   align-items: center;
 `;
 
 const BadgeGroup = ({ children, align = "center" }: BadgeGroupProps) => {
-	return <Wrapper align={align}>{children}</Wrapper>;
+	return <Wrapper $align={align}>{children}</Wrapper>;
 };
 
 export default BadgeGroup;

@@ -11,12 +11,12 @@ const AboutSection = styled.section`
   box-sizing: border-box;
 `;
 
-const InfoCard = styled.div<{ cardBackground?: string }>`
+const InfoCard = styled.div<{ $cardBackground?: string }>`
   max-width: 48rem;
   margin: 0 auto;
   text-align: left;
-  background: ${({ cardBackground }) =>
-		cardBackground ?? "rgba(31, 41, 55, 0.85)"};
+  background: ${({ $cardBackground }) =>
+		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
   backdrop-filter: blur(10px);
   border: none;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
@@ -28,15 +28,20 @@ const InfoCard = styled.div<{ cardBackground?: string }>`
 export const AboutMe = ({ cardBackground }: AboutMeProps) => {
 	return (
 		<AboutSection id="about">
-			<InfoCard cardBackground={cardBackground}>
+			<InfoCard $cardBackground={cardBackground}>
 				<Paragraph>
 					<em>
 						“Give me a lever, a place to stand and well-done investigation, and
 						I will move the earth.”
 					</em>{" "}
-					- Archimedes’ semi-cit. I was born as tireless curious. I’m a
-					proactive guy, used to knowledge sharing and receiving feedbacks
-					(whether positive or negative). In my spare time I enjoy{" "}
+					- Archimedes’ semi-cit.
+				</Paragraph>
+				<Paragraph>
+					I was born as tireless curious. I’m a proactive guy, used to knowledge
+					sharing and receiving feedbacks (whether positive or negative).
+				</Paragraph>
+				<Paragraph>
+					In my spare time I enjoy{" "}
 					<a
 						href="https://unsplash.com/it/@antony_sex"
 						target="_blank"

@@ -33,9 +33,9 @@ const CertificationsGrid = styled.div`
   }
 `;
 
-const CertificationCard = styled.div<{ cardBackground?: string }>`
-  background: ${({ cardBackground }) =>
-		cardBackground ?? "rgba(31, 41, 55, 0.85)"};
+const CertificationCard = styled.div<{ $cardBackground?: string }>`
+  background: ${({ $cardBackground }) =>
+		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
   border-radius: 0.5rem;
   padding: 1.5rem;
   text-align: center;
@@ -72,41 +72,59 @@ export const Certifications = ({ cardBackground }: CertificationsProps) => {
 				<SectionTitle>Certifications & Achievements</SectionTitle>
 
 				<CertificationsGrid>
-					<CertificationCard cardBackground={cardBackground}>
+					<CertificationCard $cardBackground={cardBackground}>
 						<Icon>🔖</Icon>
-						<CardTitle>ISTQB® Automation Engineer (CT-TAE)</CardTitle>
+						<CardTitle>
+							ISTQB® Automation Engineer
+							<br />
+							(CT-TAE)
+						</CardTitle>
 						<CardSubtitle>
 							International Software Testing Qualifications Board
 						</CardSubtitle>
 						<DateBadge>Dec 2023</DateBadge>
 					</CertificationCard>
 
-					<CertificationCard cardBackground={cardBackground}>
+					<CertificationCard $cardBackground={cardBackground}>
 						<Icon>🔖</Icon>
-						<CardTitle>ISTQB® Foundation Level (CTFL) </CardTitle>
+						<CardTitle>
+							ISTQB® Foundation Level
+							<br />
+							(CTFL)
+						</CardTitle>
 						<CardSubtitle>
 							International Software Testing Qualifications Board
 						</CardSubtitle>
 						<DateBadge>Jul 2023</DateBadge>
 					</CertificationCard>
 
-					<CertificationCard cardBackground={cardBackground}>
+					<CertificationCard $cardBackground={cardBackground}>
 						<Icon>🔖</Icon>
-						<CardTitle>Professional Scrum Master I (PSM™ I)</CardTitle>
+						<CardTitle>
+							Professional Scrum Master I<br />
+							(PSM™ I)
+						</CardTitle>
 						<CardSubtitle>Scrum.org</CardSubtitle>
 						<DateBadge>Mar 2020</DateBadge>
 					</CertificationCard>
 
-					<CertificationCard cardBackground={cardBackground}>
+					<CertificationCard $cardBackground={cardBackground}>
 						<Icon>📜</Icon>
-						<CardTitle>First Certificate in English (FCE) - B2 level</CardTitle>
+						<CardTitle>
+							First Certificate in English (FCE)
+							<br />
+							B2 level
+						</CardTitle>
 						<CardSubtitle>Cambridge Assessment English</CardSubtitle>
 						<DateBadge>Jul 2015</DateBadge>
 					</CertificationCard>
 
-					<CertificationCard cardBackground={cardBackground}>
+					<CertificationCard $cardBackground={cardBackground}>
 						<Icon>🎓</Icon>
-						<CardTitle>Engineering practice License - A section</CardTitle>
+						<CardTitle>
+							Engineering practice License
+							<br />A section
+						</CardTitle>
 						<CardSubtitle>University of Salerno</CardSubtitle>
 						<DateBadge>Sep 2015</DateBadge>
 					</CertificationCard>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CardSubtitle from "../../Typography/CardSubtitle";
+import CompanyLogo from "../../CompanyLogo";
 import CardTitle from "../../Typography/CardTitle";
 import List from "../../Typography/List";
 import Mark from "../../Typography/Mark";
@@ -32,9 +32,9 @@ const ExperienceList = styled.div`
   gap: 2rem;
 `;
 
-const ExperienceCard = styled.div<{ cardBackground?: string }>`
-  background: ${({ cardBackground }) =>
-		cardBackground ?? "rgba(31, 41, 55, 0.85)"};
+const ExperienceCard = styled.div<{ $cardBackground?: string }>`
+  background: ${({ $cardBackground }) =>
+		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
   border-radius: 0.5rem;
   padding: 1.5rem;
   color: inherit;
@@ -78,13 +78,16 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 				<SectionTitle>Professional Experience</SectionTitle>
 
 				<ExperienceList>
-					<ExperienceCard cardBackground={cardBackground}>
+					<ExperienceCard $cardBackground={cardBackground}>
 						<CardHeader>
 							<JobInfo>
 								<CardTitle>Senior QA Engineer</CardTitle>
-								<CardSubtitle>
-									<span>🏢</span> ProntoPro
-								</CardSubtitle>
+
+								<CompanyLogo
+									src="/media/images/prontopro_logo.png"
+									alt="ProntoPro S.r.l."
+									href="https://www.prontopro.it"
+								/>
 							</JobInfo>
 							<DateBadge>Jan 2024 - Present</DateBadge>
 						</CardHeader>
@@ -125,13 +128,16 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 						</List>
 					</ExperienceCard>
 
-					<ExperienceCard cardBackground={cardBackground}>
+					<ExperienceCard $cardBackground={cardBackground}>
 						<CardHeader>
 							<JobInfo>
 								<CardTitle>QA Engineer</CardTitle>
-								<CardSubtitle>
-									<span>🏢</span> ProntoPro
-								</CardSubtitle>
+
+								<CompanyLogo
+									src="/media/images/prontopro_logo.png"
+									alt="ProntoPro S.r.l."
+									href="https://www.prontopro.it"
+								/>
 							</JobInfo>
 							<DateBadge>May 2022 - Dec 2023</DateBadge>
 						</CardHeader>
@@ -160,13 +166,16 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 						</List>
 					</ExperienceCard>
 
-					<ExperienceCard cardBackground={cardBackground}>
+					<ExperienceCard $cardBackground={cardBackground}>
 						<CardHeader>
 							<JobInfo>
 								<CardTitle>QA Test Lead and Business Analyst</CardTitle>
-								<CardSubtitle>
-									<span>🏢</span> Sky Italia for Netcom Group
-								</CardSubtitle>
+
+								<CompanyLogo
+									src="/media/images/sky_logo.png"
+									alt="Sky Italia S.r.l."
+									href="https://www.sky.it"
+								/>
 							</JobInfo>
 							<DateBadge>Jan 2017 - May 2022</DateBadge>
 						</CardHeader>
@@ -193,16 +202,25 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 						</List>
 					</ExperienceCard>
 
-					<ExperienceCard cardBackground={cardBackground}>
+					<ExperienceCard $cardBackground={cardBackground}>
 						<CardHeader>
 							<JobInfo>
 								<CardTitle>QA Test Engineer</CardTitle>
-								<CardSubtitle>
-									<span>🏢</span> Sky Italia for Netcom Group
-								</CardSubtitle>
+
+								<CompanyLogo
+									src="/media/images/sky_logo.png"
+									alt="Sky Italia S.r.l."
+									href="https://www.sky.it"
+								/>
 							</JobInfo>
 							<DateBadge>Sep 2015 - Jan 2017</DateBadge>
 						</CardHeader>
+						<List>
+							<li>
+								Software validation and verification of satellite transmission
+								devices, using Agile methodology.
+							</li>
+						</List>
 					</ExperienceCard>
 				</ExperienceList>
 			</Container>

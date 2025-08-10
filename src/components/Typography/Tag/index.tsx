@@ -7,7 +7,7 @@ type TagProps = {
 	children: ReactNode;
 };
 
-const StyledTag = styled.span<{ highlighted?: boolean }>`
+const StyledTag = styled.span<{ $highlighted?: boolean }>`
   display: inline-block;
   padding: 0.25rem 0.75rem;
   font-size: 0.875rem;
@@ -21,8 +21,8 @@ const StyledTag = styled.span<{ highlighted?: boolean }>`
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 
-  ${({ highlighted }) =>
-		highlighted &&
+  ${({ $highlighted }) =>
+		$highlighted &&
 		css`
       background: rgba(96, 165, 250, 0.2);
       color: #f9fafb;
@@ -33,7 +33,7 @@ const StyledTag = styled.span<{ highlighted?: boolean }>`
 
 const Tag = ({ highlighted, label, children }: TagProps) => {
 	return (
-		<StyledTag highlighted={highlighted}>
+		<StyledTag $highlighted={highlighted}>
 			{label && (
 				<span style={{ color: "#e5e7eb", fontWeight: 600 }}>{label}</span>
 			)}

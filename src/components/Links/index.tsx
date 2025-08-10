@@ -147,12 +147,12 @@ const LinkImage = styled.img`
 
   /* Tablet and Smaller Desktop */
   @media (min-width: 701px) and (max-width: 1120px) {
-    max-width: 70%;
+    max-width: 75%;
   }
 
   /* Mobile */
   @media (max-width: 700px) {
-    max-width: 55%;
+    max-width: 75%;
   }
 `;
 

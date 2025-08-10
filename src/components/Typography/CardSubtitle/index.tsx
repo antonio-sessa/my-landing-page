@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-const CardSubtitle = styled.p`
-  font-size: 0.875rem;
+const CardSubtitle = styled.div`
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  gap: 0.5rem;         
+  font-size: 1rem;
   color: #cbd5e1;
   margin-top: 0.25rem;
 `;

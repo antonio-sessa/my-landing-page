@@ -33,9 +33,9 @@ const SkillsGrid = styled.div`
   }
 `;
 
-const SkillCard = styled.div<{ cardBackground?: string }>`
-  background: ${({ cardBackground }) =>
-		cardBackground ?? "rgba(31, 41, 55, 0.85)"};
+const SkillCard = styled.div<{ $cardBackground?: string }>`
+  background: ${({ $cardBackground }) =>
+		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
   color: inherit;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -73,11 +73,10 @@ export const Skills = ({ cardBackground }: SkillsProps) => {
 				<SectionTitle>Skills & Expertise</SectionTitle>
 
 				<SkillsGrid>
-					<SkillCard cardBackground={cardBackground}>
+					<SkillCard $cardBackground={cardBackground}>
 						<CardHeader>
 							<CardTitle>
-								<Icon>🧪</Icon>
-								Hard skills
+								<Icon>🧪</Icon> Hard skills
 							</CardTitle>
 						</CardHeader>
 						<CardContent>
@@ -94,11 +93,10 @@ export const Skills = ({ cardBackground }: SkillsProps) => {
 						</CardContent>
 					</SkillCard>
 
-					<SkillCard cardBackground={cardBackground}>
+					<SkillCard $cardBackground={cardBackground}>
 						<CardHeader>
 							<CardTitle>
-								<Icon>🧪</Icon>
-								Soft skills
+								<Icon>🧪</Icon> Soft skills
 							</CardTitle>
 						</CardHeader>
 						<CardContent>
@@ -113,11 +111,10 @@ export const Skills = ({ cardBackground }: SkillsProps) => {
 						</CardContent>
 					</SkillCard>
 
-					<SkillCard cardBackground={cardBackground}>
+					<SkillCard $cardBackground={cardBackground}>
 						<CardHeader>
 							<CardTitle>
-								<Icon>💻</Icon>
-								Used technologies
+								<Icon>💻</Icon> Used technologies
 							</CardTitle>
 						</CardHeader>
 						<CardContent>

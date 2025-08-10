@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FooterWrapper = styled.div`
-  background-color: #272628;
+  background-color: #000000;
   color: #fff;
   text-align: center;
   height: 6em;

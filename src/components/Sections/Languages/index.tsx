@@ -35,9 +35,9 @@ const LanguagesGrid = styled.div`
   }
 `;
 
-const LanguageCard = styled.div<{ cardBackground?: string }>`
-  background: ${({ cardBackground }) =>
-		cardBackground ?? "rgba(31, 41, 55, 0.85)"};
+const LanguageCard = styled.div<{ $cardBackground?: string }>`
+  background: ${({ $cardBackground }) =>
+		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
   border-radius: 0.5rem;
   padding: 1.5rem;
   text-align: center;
@@ -68,13 +68,13 @@ export const Languages = ({ cardBackground }: LanguagesProps) => {
 				<SectionTitle>Languages</SectionTitle>
 
 				<LanguagesGrid>
-					<LanguageCard cardBackground={cardBackground}>
+					<LanguageCard $cardBackground={cardBackground}>
 						<CardTitle>Italian</CardTitle>
 						<CardSubtitle>Native Speaker</CardSubtitle>
 						<LevelBadge>C2</LevelBadge>
 					</LanguageCard>
 
-					<LanguageCard cardBackground={cardBackground}>
+					<LanguageCard $cardBackground={cardBackground}>
 						<CardTitle>English</CardTitle>
 						<CardSubtitle>Professional Working Proficiency</CardSubtitle>
 						<LevelBadge>B2</LevelBadge>
