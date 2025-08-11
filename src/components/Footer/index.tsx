@@ -1,9 +1,7 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
 import styled from "styled-components";
 
 const FooterWrapper = styled.div`
-  background-color: #272628;
+  background-color: #000000;
   color: #fff;
   text-align: center;
   height: 6em;
@@ -21,18 +19,18 @@ const Location = styled.span`
 `;
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
+	const currentYear = new Date().getFullYear();
 
-  return (
-    <FooterWrapper>
-      <P>
-        {`Coded with ♥ by Antonio Sessa`}
-        <br />
-        {`© ${currentYear} `}
-        <Location>
-          <i className="fa fa-map-marker" aria-hidden="true"></i> {`Milan, IT`}
-        </Location>
-      </P>
-    </FooterWrapper>
-  );
+	return (
+		<FooterWrapper>
+			<P>
+				{`Coded with ♥ by Antonio Sessa`}
+				<br />
+				{`© ${currentYear} `}
+				<Location>
+					<i className="fa fa-map-marker" aria-hidden="true"></i> {`Milan, IT`}
+				</Location>
+			</P>
+		</FooterWrapper>
+	);
 };
