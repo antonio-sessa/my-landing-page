@@ -1,9 +1,9 @@
 import { CV } from "../components/CV";
 import { Footer } from "../components/Footer";
-import { Hero } from "../components/Hero";
-import { LineBreaker } from "../components/LineBreaker";
-import { Links } from "../components/Links";
 import { Main } from "../components/Main";
+import { Hero } from "../components/Main/Hero";
+import { LineBreaker } from "../components/Main/LineBreaker";
+import { Links } from "../components/Main/Links";
 import { AboutMe } from "../components/Sections/AboutMe";
 import { Certifications } from "../components/Sections/Certifications";
 import { Education } from "../components/Sections/Education";

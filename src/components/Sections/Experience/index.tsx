@@ -1,86 +1,47 @@
 import styled from "styled-components";
-import CompanyLogo from "../../CompanyLogo";
+import type { SectionProps } from "../../../types/section-pros";
+import Badge from "../../CV/Badge";
+import Card from "../../CV/Card";
+import CardHeader from "../../CV/CardHeader";
+import CardList from "../../CV/CardList";
+import CompanyLogo from "../../CV/CompanyLogo";
+import Container from "../../CV/Container";
+import SectionBlock from "../../CV/SectionBlock";
 import CardTitle from "../../Typography/CardTitle";
 import List from "../../Typography/List";
 import Mark from "../../Typography/Mark";
+import SectionTitle from "../../Typography/SectionTitle";
 
-type ExperienceProps = {
-	cardBackground?: string;
-};
-
-const ExperienceSection = styled.section`
-  padding: 2rem 1rem;
-  width: 100%;
+const ExperienceCard = styled(Card)<{ $cardBackground?: string }>`
+  text-align: left;
 `;
 
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-`;
-
-const SectionTitle = styled.h3`
-  font-size: 1.875rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: inherit;
-`;
-
-const ExperienceList = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-`;
-
-const ExperienceCard = styled.div<{ $cardBackground?: string }>`
-  background: ${({ $cardBackground }) =>
-		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  color: inherit;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-  transition: box-shadow 0.3s ease;
-
-  &:hover {
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
-  }
-`;
-
-const CardHeader = styled.div`
+const ExperienceCardHeader = styled(CardHeader)`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1rem;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 0;
 `;
 
-const JobInfo = styled.div`
+const JobPositionInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 `;
 
-const DateBadge = styled.span`
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #374151;
-  color: #d1d5db;
-  padding: 0.25rem 0.75rem;
-  border-radius: 0.375rem;
-  font-size: 0.875rem;
-  white-space: nowrap;
-`;
-
-export const Experience = ({ cardBackground }: ExperienceProps) => {
+export const Experience = ({ cardBackground }: SectionProps) => {
 	return (
-		<ExperienceSection id="experience">
+		<SectionBlock id="experience">
 			<Container>
 				<SectionTitle>Professional Experience</SectionTitle>
 
-				<ExperienceList>
+				<CardList>
 					<ExperienceCard $cardBackground={cardBackground}>
-						<CardHeader>
-							<JobInfo>
+						<ExperienceCardHeader>
+							<JobPositionInfo>
 								<CardTitle>Senior QA Engineer</CardTitle>
 
 								<CompanyLogo
@@ -88,9 +49,9 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 									alt="ProntoPro S.r.l."
 									href="https://www.prontopro.it"
 								/>
-							</JobInfo>
-							<DateBadge>Jan 2024 - Present</DateBadge>
-						</CardHeader>
+							</JobPositionInfo>
+							<Badge>Jan 2024 - Present</Badge>
+						</ExperienceCardHeader>
 						<List>
 							<li>
 								Currently <Mark>Senior Engineer S2</Mark>, accordingly to this{" "}
@@ -129,8 +90,8 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 					</ExperienceCard>
 
 					<ExperienceCard $cardBackground={cardBackground}>
-						<CardHeader>
-							<JobInfo>
+						<ExperienceCardHeader>
+							<JobPositionInfo>
 								<CardTitle>QA Engineer</CardTitle>
 
 								<CompanyLogo
@@ -138,9 +99,9 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 									alt="ProntoPro S.r.l."
 									href="https://www.prontopro.it"
 								/>
-							</JobInfo>
-							<DateBadge>May 2022 - Dec 2023</DateBadge>
-						</CardHeader>
+							</JobPositionInfo>
+							<Badge>May 2022 - Dec 2023</Badge>
+						</ExperienceCardHeader>
 						<List>
 							<li>
 								<a
@@ -167,8 +128,8 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 					</ExperienceCard>
 
 					<ExperienceCard $cardBackground={cardBackground}>
-						<CardHeader>
-							<JobInfo>
+						<ExperienceCardHeader>
+							<JobPositionInfo>
 								<CardTitle>QA Test Lead and Business Analyst</CardTitle>
 
 								<CompanyLogo
@@ -176,9 +137,9 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 									alt="Sky Italia S.r.l."
 									href="https://www.sky.it"
 								/>
-							</JobInfo>
-							<DateBadge>Jan 2017 - May 2022</DateBadge>
-						</CardHeader>
+							</JobPositionInfo>
+							<Badge>Jan 2017 - May 2022</Badge>
+						</ExperienceCardHeader>
 						<List>
 							<li>
 								<Mark>Monitoring a manual testers group</Mark>
@@ -203,8 +164,8 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 					</ExperienceCard>
 
 					<ExperienceCard $cardBackground={cardBackground}>
-						<CardHeader>
-							<JobInfo>
+						<ExperienceCardHeader>
+							<JobPositionInfo>
 								<CardTitle>QA Test Engineer</CardTitle>
 
 								<CompanyLogo
@@ -212,9 +173,9 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 									alt="Sky Italia S.r.l."
 									href="https://www.sky.it"
 								/>
-							</JobInfo>
-							<DateBadge>Sep 2015 - Jan 2017</DateBadge>
-						</CardHeader>
+							</JobPositionInfo>
+							<Badge>Sep 2015 - Jan 2017</Badge>
+						</ExperienceCardHeader>
 						<List>
 							<li>
 								Software validation and verification of satellite transmission
@@ -222,8 +183,8 @@ export const Experience = ({ cardBackground }: ExperienceProps) => {
 							</li>
 						</List>
 					</ExperienceCard>
-				</ExperienceList>
+				</CardList>
 			</Container>
-		</ExperienceSection>
+		</SectionBlock>
 	);
 };

@@ -48,7 +48,6 @@ type CVProps = {
 };
 
 export const CV = ({ children }: CVProps) => {
-	// 🟦 High-contrast, soft card background (cool-tone)
 	const cardBackground = "#1e293b"; // Slate-800
 
 	return (

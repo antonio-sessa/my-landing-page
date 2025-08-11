@@ -1,19 +1,15 @@
 import styled from "styled-components";
+import type { SectionProps } from "../../../types/section-pros";
+import Container from "../../CV/Container";
+import SectionBlock from "../../CV/SectionBlock";
 import Paragraph from "../../Typography/Paragraph";
 
-type AboutMeProps = {
-	cardBackground?: string;
-};
-
-const AboutSection = styled.section`
-  padding: 2rem 1rem;
-  width: 100%;
+const AboutMeSectionBlock = styled(SectionBlock)`
   box-sizing: border-box;
 `;
 
-const InfoCard = styled.div<{ $cardBackground?: string }>`
+const AboutMeContainer = styled(Container)<{ $cardBackground?: string }>`
   max-width: 48rem;
-  margin: 0 auto;
   text-align: left;
   background: ${({ $cardBackground }) =>
 		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
@@ -25,10 +21,10 @@ const InfoCard = styled.div<{ $cardBackground?: string }>`
   color: inherit;
 `;
 
-export const AboutMe = ({ cardBackground }: AboutMeProps) => {
+export const AboutMe = ({ cardBackground }: SectionProps) => {
 	return (
-		<AboutSection id="about">
-			<InfoCard $cardBackground={cardBackground}>
+		<AboutMeSectionBlock id="about">
+			<AboutMeContainer $cardBackground={cardBackground}>
 				<Paragraph>
 					<em>
 						“Give me a lever, a place to stand and well-done investigation, and
@@ -51,7 +47,7 @@ export const AboutMe = ({ cardBackground }: AboutMeProps) => {
 					</a>{" "}
 					the beauty around me, and deep dive in the world of personal finance.
 				</Paragraph>
-			</InfoCard>
-		</AboutSection>
+			</AboutMeContainer>
+		</AboutMeSectionBlock>
 	);
 };
