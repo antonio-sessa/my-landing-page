@@ -1,4 +1,5 @@
 import { Racing_Sans_One } from "next/font/google";
+import Image from "next/image";
 import styled from "styled-components";
 
 export const racingSansOne = Racing_Sans_One({
@@ -81,39 +82,12 @@ const Card = styled.a`
     transition: transform 200ms;
   }
 
-  h2 {
-    font-weight: 600;
-    margin-bottom: 0.7rem;
-    text-align: center;
-  }
-
-  p {
-    margin: 0;
-    opacity: 0.6;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    max-width: 30ch;
-  }
-
-  /* Enable hover only on non-touch devices */
+  /* Hover effects for non-touch devices */
   @media (hover: hover) and (pointer: fine) {
     :hover {
       background: rgba(var(--card-rgb), 0.1);
       border: 1px solid rgba(var(--card-border-rgb), 0.15);
     }
-
-    :hover span {
-      transform: translateY(4px);
-    }
-  }
-
-  /* Enable hover only on non-touch devices */
-  @media (hover: hover) and (pointer: fine) {
-    :hover {
-      background: rgba(var(--card-rgb), 0.1);
-      border: 1px solid rgba(var(--card-border-rgb), 0.15);
-    }
-
     :hover span {
       transform: translateY(4px);
     }
@@ -125,49 +99,55 @@ const Card = styled.a`
     }
   }
 
-  /* Tablet and Smaller Desktop */
-  @media (min-width: 701px) and (max-width: 1120px) {
-  }
-
-  /* Mobile */
-  @media (max-width: 700px) {
-  }
-
   h2 {
     margin-bottom: 0rem;
     ${racingSansOne.style}
+    font-weight: 600;
+    text-align: center;
   }
 `;
 
-const LinkImage = styled.img`
-  vertical-align: middle;
+const LinkImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  max-width: 70%;
-  border-radius: 23px;
+  img {
+    border-radius: 23px;
+    max-width: 70%;
+    height: auto;
 
-  /* Tablet and Smaller Desktop */
-  @media (min-width: 701px) and (max-width: 1120px) {
-    max-width: 75%;
-  }
+    @media (min-width: 701px) and (max-width: 1120px) {
+      max-width: 75%;
+    }
 
-  /* Mobile */
-  @media (max-width: 700px) {
-    max-width: 75%;
+    @media (max-width: 700px) {
+      max-width: 75%;
+    }
   }
 `;
 
 export const Links = () => {
 	return (
 		<LinksSection>
-			{links.map((link, _index) => (
+			{links.map((link) => (
 				<Card
 					key={link.name}
 					href={link.url}
 					aria-label={link.name}
 					title={link.name}
+					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<LinkImage src={link.image} alt={link.name} />
+					<LinkImageWrapper>
+						<Image
+							src={link.image} // Stored in /public/media/images/logos/
+							alt={link.name}
+							width={64}
+							height={64}
+							priority={link.name === "Linkedin"} // preload first link
+						/>
+					</LinkImageWrapper>
 				</Card>
 			))}
 		</LinksSection>
