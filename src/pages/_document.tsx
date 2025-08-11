@@ -6,7 +6,6 @@ import Document, {
 	NextScript,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { Meta } from "../components/Meta";
 
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -33,9 +32,7 @@ export default class MyDocument extends Document {
 	render = () => {
 		return (
 			<Html lang="en">
-				<Head>
-					<Meta />
-				</Head>
+				<Head />
 				<body>
 					<Main />
 					<NextScript />
