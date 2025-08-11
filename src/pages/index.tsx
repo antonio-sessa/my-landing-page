@@ -4,6 +4,7 @@ import { Main } from "../components/Main";
 import { Hero } from "../components/Main/Hero";
 import { LineBreaker } from "../components/Main/LineBreaker";
 import { Links } from "../components/Main/Links";
+import { Meta } from "../components/Meta";
 import { AboutMe } from "../components/Sections/AboutMe";
 import { Certifications } from "../components/Sections/Certifications";
 import { Education } from "../components/Sections/Education";
@@ -14,6 +15,7 @@ import { Skills } from "../components/Sections/Skills";
 export default function Home() {
 	return (
 		<>
+			<Meta />
 			<Main>
 				<Hero />
 				<LineBreaker />

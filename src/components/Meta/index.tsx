@@ -1,6 +1,8 @@
+import Head from "next/head";
+
 export const Meta = () => {
 	return (
-		<>
+		<Head>
 			<title>
 				Antonio Sessa - Passionate Senior QA Engineer and Photographer
 			</title>
@@ -29,6 +31,6 @@ export const Meta = () => {
 			/>
 			<meta property="og:url" content="https://antoniosessa.com" />
 			<meta property="og:type" content="website" />
-		</>
+		</Head>
 	);
 };
