@@ -9,7 +9,7 @@ module.exports = nextConfig;
 module.exports = {
 	webpack: (config, { isServer }) => {
 		if (isServer) {
-			require("./src/scripts/generate-sitemap");
+			require("./src/lib/generate-sitemap");
 		}
 
 		return config;
