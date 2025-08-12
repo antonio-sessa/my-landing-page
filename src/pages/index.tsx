@@ -1,3 +1,4 @@
+import type { GetServerSideProps } from "next";
 import { CV } from "../components/CV";
 import { Footer } from "../components/Footer";
 import { Main } from "../components/Main";
@@ -11,11 +12,12 @@ import { Education } from "../components/Sections/Education";
 import { Experience } from "../components/Sections/Experience";
 import { Languages } from "../components/Sections/Languages";
 import { Skills } from "../components/Sections/Skills";
+import { getBaseUrl } from "../lib/getBaseUrl";
 
-export default function Home() {
+export default function Home({ baseUrl }: { baseUrl: string }) {
 	return (
 		<>
-			<Meta />
+			<Meta baseUrl={baseUrl} />
 			<Main>
 				<Hero />
 				<LineBreaker />
@@ -33,3 +35,11 @@ export default function Home() {
 		</>
 	);
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+	return {
+		props: {
+			baseUrl: getBaseUrl(req),
+		},
+	};
+};

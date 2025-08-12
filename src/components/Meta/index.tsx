@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export const Meta = () => {
+export const Meta = ({ baseUrl }: { baseUrl: string }) => {
 	return (
 		<Head>
 			<title>
@@ -8,14 +8,11 @@ export const Meta = () => {
 			</title>
 			<meta
 				name="description"
-				content="Discover how my passion for Quality Assurance drives dynamic teams, fosters creativity, and delivers exceptional results.
-        Currently based in Milan, IT."
+				content="Discover how my passion for Quality Assurance drives dynamic teams, fosters creativity, and delivers exceptional results. Currently based in Milan, IT."
 			/>
-
 			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<link rel="icon" href="/media/images/favicon.png" />
-			<link rel="canonical" href="https://antoniosessa.com" />
-
+			<link rel="canonical" href={baseUrl} />
 			{/* Open Graph Tags */}
 			<meta
 				property="og:title"
@@ -27,9 +24,9 @@ export const Meta = () => {
 			/>
 			<meta
 				property="og:image"
-				content="https://antoniosessa.com/media/images/landing-scaled.jpg"
+				content={`${baseUrl}/media/images/landing-scaled.jpg`}
 			/>
-			<meta property="og:url" content="https://antoniosessa.com" />
+			<meta property="og:url" content={baseUrl} />
 			<meta property="og:type" content="website" />
 		</Head>
 	);
