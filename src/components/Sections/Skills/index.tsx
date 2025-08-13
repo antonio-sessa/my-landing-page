@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import type { SectionProps } from "../../../types/section-pros";
-import Card from "../../CV/Card";
-import CardHeader from "../../CV/CardHeader";
-import Container from "../../CV/Container";
-import Grid from "../../CV/Grid";
-import Icon from "../../CV/Icon";
-import SectionBlock from "../../CV/SectionBlock";
-import Tag from "../../CV/Tag";
-import TagGroup from "../../CV/TagGroup";
 import CardTitle from "../../Typography/CardTitle";
 import SectionTitle from "../../Typography/SectionTitle";
+import Card from "../../UI/Card";
+import CardHeader from "../../UI/CardHeader";
+import Container from "../../UI/Container";
+import Grid from "../../UI/Grid";
+import Icon from "../../UI/Icon";
+import SectionBlock from "../../UI/SectionBlock";
+import Tag from "../../UI/Tag";
+import TagGroup from "../../UI/TagGroup";
 
 const SkillsCard = styled(Card)`
   text-align: left;

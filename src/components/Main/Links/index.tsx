@@ -141,11 +141,11 @@ export const Links = () => {
 				>
 					<LinkImageWrapper>
 						<Image
-							src={link.image} // Stored in /public/media/images/logos/
+							src={link.image}
 							alt={link.name}
 							width={64}
 							height={64}
-							priority={link.name === "Linkedin"} // preload first link
+							priority={link.name === "Linkedin"}
 						/>
 					</LinkImageWrapper>
 				</Card>

@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import type { SectionProps } from "../../../types/section-pros";
-import Badge from "../../CV/Badge";
-import Card from "../../CV/Card";
-import CardHeader from "../../CV/CardHeader";
-import CardList from "../../CV/CardList";
-import CompanyLogo from "../../CV/CompanyLogo";
-import Container from "../../CV/Container";
-import SectionBlock from "../../CV/SectionBlock";
 import CardTitle from "../../Typography/CardTitle";
 import List from "../../Typography/List";
 import Mark from "../../Typography/Mark";
 import SectionTitle from "../../Typography/SectionTitle";
+import Badge from "../../UI/Badge";
+import Card from "../../UI/Card";
+import CardHeader from "../../UI/CardHeader";
+import CardList from "../../UI/CardList";
+import CompanyLogo from "../../UI/CompanyLogo";
+import Container from "../../UI/Container";
+import SectionBlock from "../../UI/SectionBlock";
 
 const ExperienceCard = styled(Card)<{ $cardBackground?: string }>`
   text-align: left;

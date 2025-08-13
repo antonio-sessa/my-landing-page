@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import type { SectionProps } from "../../../types/section-pros";
-import BadgeGroup from "../../CV/BadgeGroup";
-import Card from "../../CV/Card";
-import Container from "../../CV/Container";
-import Grid from "../../CV/Grid";
-import Icon from "../../CV/Icon";
-import SectionBlock from "../../CV/SectionBlock";
-import Tag from "../../CV/Tag";
 import CardSubtitle from "../../Typography/CardSubtitle";
 import CardTitle from "../../Typography/CardTitle";
 import Description from "../../Typography/Description";
 import SectionTitle from "../../Typography/SectionTitle";
+import BadgeGroup from "../../UI/BadgeGroup";
+import Card from "../../UI/Card";
+import Container from "../../UI/Container";
+import Grid from "../../UI/Grid";
+import Icon from "../../UI/Icon";
+import SectionBlock from "../../UI/SectionBlock";
+import Tag from "../../UI/Tag";
 
 const EducationGrid = styled(Grid)`
   @media (min-width: 768px) {

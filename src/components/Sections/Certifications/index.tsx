@@ -1,13 +1,13 @@
 import type { SectionProps } from "../../../types/section-pros";
-import Badge from "../../CV/Badge";
-import Card from "../../CV/Card";
-import Container from "../../CV/Container";
-import Grid from "../../CV/Grid";
-import Icon from "../../CV/Icon";
-import SectionBlock from "../../CV/SectionBlock";
 import CardSubtitle from "../../Typography/CardSubtitle";
 import CardTitle from "../../Typography/CardTitle";
 import SectionTitle from "../../Typography/SectionTitle";
+import Badge from "../../UI/Badge";
+import Card from "../../UI/Card";
+import Container from "../../UI/Container";
+import Grid from "../../UI/Grid";
+import Icon from "../../UI/Icon";
+import SectionBlock from "../../UI/SectionBlock";
 
 export const Certifications = ({ cardBackground }: SectionProps) => {
 	return (

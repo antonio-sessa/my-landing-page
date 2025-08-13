@@ -1,11 +1,17 @@
 import Head from "next/head";
 
-export const Meta = ({ baseUrl }: { baseUrl: string }) => {
+interface MetaProps {
+	baseUrl: string;
+	title?: string; // optional so old calls without title still work
+}
+
+export const Meta = ({ baseUrl, title }: MetaProps) => {
+	const pageTitle =
+		title ?? "Antonio Sessa - Passionate Senior QA Engineer and Photographer";
+
 	return (
 		<Head>
-			<title>
-				Antonio Sessa - Passionate Senior QA Engineer and Photographer
-			</title>
+			<title>{pageTitle}</title>
 			<meta
 				name="description"
 				content="Discover how my passion for Quality Assurance drives dynamic teams, fosters creativity, and delivers exceptional results. Currently based in Milan, IT."
@@ -14,10 +20,7 @@ export const Meta = ({ baseUrl }: { baseUrl: string }) => {
 			<link rel="icon" href="/media/images/favicon.png" />
 			<link rel="canonical" href={baseUrl} />
 			{/* Open Graph Tags */}
-			<meta
-				property="og:title"
-				content="Antonio Sessa - Passionate Senior QA Engineer and Photographer"
-			/>
+			<meta property="og:title" content={pageTitle} />
 			<meta
 				property="og:description"
 				content="Discover how my passion for Quality Assurance drives dynamic teams, fosters creativity, and delivers exceptional results. Currently based in Milan, IT."

@@ -916,6 +916,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@notionhq/client@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-4.0.1.tgz#9dd7c63b88a4e865db85e05d8694c0b9c3eb0d7a"
+  integrity sha512-SdILqiiThECLR2KDUOvl4JqRaJWBwDYaEw/f0qu+G6rKN/QUCkaJ84vN5MgBw1yKsMAsKxBlDazs3Jw6vv2ikA==
+
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import type { SectionProps } from "../../../types/section-pros";
-import Container from "../../CV/Container";
-import SectionBlock from "../../CV/SectionBlock";
 import Paragraph from "../../Typography/Paragraph";
+import Container from "../../UI/Container";
+import SectionBlock from "../../UI/SectionBlock";
 
 const AboutMeSectionBlock = styled(SectionBlock)`
   box-sizing: border-box;
