@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 import type { Reading } from "../../../types/reading";
 import type { SectionProps } from "../../../types/section-pros";
@@ -49,7 +51,6 @@ export const ReadingList = ({ cardBackground, readings }: ReadingListProps) => {
 							? new Date(book.createdAt).toLocaleDateString(undefined, {
 									year: "numeric",
 									month: "short",
-									day: "numeric",
 								})
 							: null;
 

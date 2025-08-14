@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import styled from "styled-components";
 
@@ -10,7 +12,7 @@ const HeaderContainer = styled.header`
   align-items: center;
 `;
 
-const BackLink = styled.a`
+const BackLink = styled.div`
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -24,7 +26,7 @@ const BackLink = styled.a`
 export const ReadingListHeader = () => {
 	return (
 		<HeaderContainer>
-			<Link href="/" passHref legacyBehavior>
+			<Link href="/" aria-label="Back to CV">
 				<BackLink>&larr; Back to CV</BackLink>
 			</Link>
 		</HeaderContainer>

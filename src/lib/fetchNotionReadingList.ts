@@ -1,34 +1,38 @@
 import { Client } from "@notionhq/client";
-import type {
-	PageObjectResponse,
-	QueryDatabaseResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { Reading } from "../types/reading";
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
-export async function fetchNotionReadingList(): Promise<Reading[]> {
+interface FetchOptions {
+	pageSize?: number;
+	startCursor?: string;
+}
+
+export async function fetchNotionReadingList({
+	pageSize = 5,
+	startCursor,
+}: FetchOptions = {}): Promise<{
+	readings: Reading[];
+	hasMore: boolean;
+	nextCursor?: string;
+}> {
 	const databaseId = process.env.NOTION_DATABASE_ID;
 	if (!databaseId) {
-		throw new Error("NOTION_DATABASE_ID environment variable is not set");
+		throw new Error("NOTION_DATABASE_ID is not set");
 	}
 
-	let response: QueryDatabaseResponse;
-	try {
-		response = await notion.databases.query({
-			database_id: databaseId,
-			sorts: [{ property: "CreatedAt", direction: "descending" }],
-		});
-	} catch (error) {
-		console.error("[Notion] Failed to fetch Reading List:", error);
-		return [];
-	}
+	const response = await notion.databases.query({
+		database_id: databaseId,
+		page_size: pageSize,
+		...(startCursor ? { start_cursor: startCursor } : {}),
+		sorts: [{ property: "CreatedAt", direction: "descending" }],
+	});
 
-	return response.results
+	const readings: Reading[] = response.results
 		.filter((page): page is PageObjectResponse => "properties" in page)
 		.map((page) => {
 			const props = page.properties;
-
 			return {
 				id: page.id,
 				title:
@@ -53,4 +57,10 @@ export async function fetchNotionReadingList(): Promise<Reading[]> {
 						: undefined,
 			};
 		});
+
+	return {
+		readings,
+		hasMore: response.has_more,
+		nextCursor: response.next_cursor ?? undefined,
+	};
 }
