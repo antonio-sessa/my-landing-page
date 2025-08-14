@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import type { Reading } from "../../../types/reading";
 import type { SectionProps } from "../../../types/section-pros";
+
 import CardTitle from "../../Typography/CardTitle";
 import Description from "../../Typography/Description";
 import { Link } from "../../Typography/Link";
@@ -20,6 +21,10 @@ interface ReadingListProps extends SectionProps {
 
 const ReadingGrid = styled(Grid)`
   grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const ReadingItemCard = styled(Card)`
@@ -30,13 +35,18 @@ const ReadingItemCard = styled(Card)`
   flex-direction: column;
   gap: 0.25rem;
   align-items: flex-start;
-  min-height: auto;
+  min-height: 120px; 
+  box-sizing: border-box;
 `;
 
 const TopRightBadgeGroup = styled(BadgeGroup)`
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+
+  min-width: unset;
+  margin-top: 0;
+  justify-content: flex-end;
 `;
 
 export const ReadingList = ({ cardBackground, readings }: ReadingListProps) => {
@@ -71,17 +81,17 @@ export const ReadingList = ({ cardBackground, readings }: ReadingListProps) => {
 									</CardTitle>
 								)}
 
-								{(book.status || formattedDate) && (
-									<TopRightBadgeGroup>
-										{book.status && <Tag>{book.status}</Tag>}
-										{formattedDate && <Tag>{formattedDate}</Tag>}
-									</TopRightBadgeGroup>
-								)}
-
 								{book.summary && (
 									<Description style={{ marginTop: "0.25rem" }}>
 										{book.summary}
 									</Description>
+								)}
+
+								{(book.status || formattedDate) && (
+									<TopRightBadgeGroup align="right">
+										{book.status && <Tag>{book.status}</Tag>}
+										{formattedDate && <Tag>{formattedDate}</Tag>}
+									</TopRightBadgeGroup>
 								)}
 							</ReadingItemCard>
 						);

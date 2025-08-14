@@ -1,5 +1,8 @@
+"use client"; // needed for StyledComponentsRegistry only
+
 import Script from "next/script";
 import { GlobalStyle } from "../components/GlobalStyle";
+import StyledComponentsRegistry from "./lib/registry";
 
 export default function RootLayout({
 	children,
@@ -10,10 +13,10 @@ export default function RootLayout({
 		<html lang="en">
 			<head />
 			<body>
-				<GlobalStyle />
-
-				{/* Your app content */}
-				{children}
+				<StyledComponentsRegistry>
+					<GlobalStyle />
+					{children}
+				</StyledComponentsRegistry>
 
 				<Script
 					data-cookieconsent="ignore"
@@ -21,17 +24,15 @@ export default function RootLayout({
 					strategy="afterInteractive"
 				>
 					{`
-						window.dataLayer = window.dataLayer || [];
-            			function gtag(){window.dataLayer.push(arguments);}
-            			gtag('consent', 'default', {ad_storage:'denied', analytics_storage:'denied'});
-            			gtag('set', 'ads_data_redaction', true);
-            			gtag('set', 'url_passthrough', true);
-
-            			gtag('js', new Date());
-            			gtag('config', 'GT-MR458Z9');
-          			`}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('consent', 'default', {ad_storage:'denied', analytics_storage:'denied'});
+            gtag('set', 'ads_data_redaction', true);
+            gtag('set', 'url_passthrough', true);
+            gtag('js', new Date());
+            gtag('config', 'GT-MR458Z9');
+          `}
 				</Script>
-
 				<Script
 					data-cookieconsent="ignore"
 					src="https://www.googletagmanager.com/gtag/js?id=GT-MR458Z9"

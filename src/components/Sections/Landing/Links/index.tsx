@@ -40,44 +40,23 @@ const links = [
 ];
 
 const LinksSection = styled.section`
-  display: grid;
-  grid-template-columns: repeat(
-    ${links.length},
-    minmax(${100 / links.length}%, auto)
-  );
-  width: var(--max-width);
-  max-width: 30%;
-
-  /* Tablet and Smaller Desktop */
-  @media (min-width: 701px) and (max-width: 1120px) {
-    grid-template-columns: repeat(
-      ${links.length},
-      minmax(${100 / links.length}%, auto)
-    );
-    min-width: 320px;
-  }
-
-  /* Mobile */
-  @media (max-width: 700px) {
-    grid-template-columns: repeat(
-      ${links.length / 2},
-      minmax(${100 / (links.length / 2)}%, auto)
-    );
-    min-width: 250px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Center horizontally */
+  gap: 1rem;                 /* Even gap between icons */
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 `;
 
 const Card = styled.a`
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
-
   vertical-align: middle;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition:
-    background 200ms,
-    border 200ms;
+  transition: background 200ms, border 200ms;
 
   span {
     display: inline-block;
@@ -113,19 +92,22 @@ const LinkImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 23px;
+  overflow: hidden;
+
+  @media (max-width: 700px) {
+    width: 45px;   /* Smaller icons on mobile */
+    height: 45px;
+    border-radius: 12px;
+  }
 
   img {
-    border-radius: 23px;
-    max-width: 70%;
-    height: auto;
-
-    @media (min-width: 701px) and (max-width: 1120px) {
-      max-width: 75%;
-    }
-
-    @media (max-width: 700px) {
-      max-width: 75%;
-    }
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    display: block;
   }
 `;
 
@@ -147,7 +129,8 @@ export const Links = () => {
 							alt={link.name}
 							width={64}
 							height={64}
-							priority={link.name === "Linkedin"}
+							priority={link.name === "Linkedin"} // preload first icon
+							style={{ width: "auto", height: "100%", objectFit: "contain" }}
 						/>
 					</LinkImageWrapper>
 				</Card>

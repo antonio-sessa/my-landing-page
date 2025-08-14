@@ -13,13 +13,30 @@ const Wrapper = styled.div<{ $align?: "left" | "center" | "right" }>`
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 0.5rem;
+
   justify-content: ${({ $align }) =>
 		$align === "left"
 			? "flex-start"
 			: $align === "right"
 				? "flex-end"
 				: "center"};
-  align-items: center;
+  align-items: ${({ $align }) =>
+		$align === "left"
+			? "flex-start"
+			: $align === "right"
+				? "flex-end"
+				: "center"};
+  align-content: ${({ $align }) =>
+		$align === "left"
+			? "flex-start"
+			: $align === "right"
+				? "flex-end"
+				: "center"};
+
+  box-sizing: border-box;
+
+  min-height: 2.25rem;
+  min-width: 100%;
 `;
 
 const BadgeGroup = ({ children, align = "center" }: BadgeGroupProps) => {
