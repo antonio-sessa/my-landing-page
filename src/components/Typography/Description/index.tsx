@@ -7,6 +7,7 @@ const Description = styled.p`
   line-height: 1.6;
   color: #9ca3af;
   margin-top: 0.5rem;
+  white-space: pre-wrap;
 `;
 
 export default Description;

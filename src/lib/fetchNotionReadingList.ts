@@ -41,7 +41,7 @@ export async function fetchNotionReadingList({
 						: "Untitled",
 				summary:
 					props.Summary?.type === "rich_text"
-						? (props.Summary.rich_text[0]?.plain_text ?? "")
+						? props.Summary.rich_text.map((rt) => rt.plain_text).join("\n")
 						: "",
 				link:
 					props.Link?.type === "url"
