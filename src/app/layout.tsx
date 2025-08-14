@@ -1,5 +1,3 @@
-"use client"; // needed for StyledComponentsRegistry only
-
 import Script from "next/script";
 import { GlobalStyle } from "../components/GlobalStyle";
 import StyledComponentsRegistry from "./lib/registry";

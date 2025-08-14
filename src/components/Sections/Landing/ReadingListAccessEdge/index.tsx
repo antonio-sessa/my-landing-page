@@ -34,7 +34,7 @@ export const ReadingListAccessEdge = () => {
 		<Link href="/reading-list" aria-label="Go to Reading List">
 			<EdgeCard $collapsed={collapsed} $mounted={mounted}>
 				<Icon>📚</Icon>
-				<Text $collapsed={collapsed}>My Reading List</Text>
+				<Text $collapsed={collapsed}>Reading List</Text>
 			</EdgeCard>
 		</Link>
 	);
@@ -70,7 +70,7 @@ const EdgeCard = styled.div<EdgeCardProps>`
   height: 3rem;
 
   @media (max-width: 768px) {
-    bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+    bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
     right: calc(0.75rem + env(safe-area-inset-right, 0px));
     width: ${({ $collapsed }) => ($collapsed ? "2.5rem" : "160px")};
     max-width: ${({ $collapsed }) => ($collapsed ? "2.5rem" : "160px")};

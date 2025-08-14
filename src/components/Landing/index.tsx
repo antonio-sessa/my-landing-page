@@ -24,11 +24,11 @@ export const LandingWrapper = styled.main`
   }
 
   @media (max-width: 1120px) and (orientation: landscape) {
-    padding-top: 45vh;
+    padding-top: 60vh;
   }
 
   @media (max-width: 700px) and (orientation: portrait) {
-    padding-top: 55vh;
+    padding-top: 52vh;
   }
 
   @media (max-width: 700px) and (orientation: landscape) {
