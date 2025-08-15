@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import type { SectionProps } from "../../../../types/section-pros";
 import CardTitle from "../../../Typography/CardTitle";
 import List from "../../../Typography/List";
 import Mark from "../../../Typography/Mark";
@@ -14,7 +13,7 @@ import CompanyLogo from "../../../UI/CompanyLogo";
 import Container from "../../../UI/Container";
 import SectionBlock from "../../../UI/SectionBlock";
 
-const ExperienceCard = styled(Card)<{ $cardBackground?: string }>`
+const ExperienceCard = styled(Card)`
   text-align: left;
 `;
 
@@ -34,14 +33,14 @@ const JobPositionInfo = styled.div`
   gap: 0.25rem;
 `;
 
-export const Experience = ({ cardBackground }: SectionProps) => {
+export const Experience = () => {
 	return (
 		<SectionBlock id="experience">
 			<Container>
 				<SectionTitle>Professional Experience</SectionTitle>
 
 				<CardList>
-					<ExperienceCard $cardBackground={cardBackground}>
+					<ExperienceCard>
 						<ExperienceCardHeader>
 							<JobPositionInfo>
 								<CardTitle>Senior QA Engineer</CardTitle>
@@ -91,7 +90,7 @@ export const Experience = ({ cardBackground }: SectionProps) => {
 						</List>
 					</ExperienceCard>
 
-					<ExperienceCard $cardBackground={cardBackground}>
+					<ExperienceCard>
 						<ExperienceCardHeader>
 							<JobPositionInfo>
 								<CardTitle>QA Engineer</CardTitle>
@@ -129,7 +128,7 @@ export const Experience = ({ cardBackground }: SectionProps) => {
 						</List>
 					</ExperienceCard>
 
-					<ExperienceCard $cardBackground={cardBackground}>
+					<ExperienceCard>
 						<ExperienceCardHeader>
 							<JobPositionInfo>
 								<CardTitle>QA Test Lead and Business Analyst</CardTitle>
@@ -165,7 +164,7 @@ export const Experience = ({ cardBackground }: SectionProps) => {
 						</List>
 					</ExperienceCard>
 
-					<ExperienceCard $cardBackground={cardBackground}>
+					<ExperienceCard>
 						<ExperienceCardHeader>
 							<JobPositionInfo>
 								<CardTitle>QA Test Engineer</CardTitle>

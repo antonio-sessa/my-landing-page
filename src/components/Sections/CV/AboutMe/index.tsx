@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import type { SectionProps } from "../../../../types/section-pros";
 import Paragraph from "../../../Typography/Paragraph";
 import Container from "../../../UI/Container";
 import SectionBlock from "../../../UI/SectionBlock";
@@ -10,23 +9,22 @@ const AboutMeSectionBlock = styled(SectionBlock)`
   box-sizing: border-box;
 `;
 
-const AboutMeContainer = styled(Container)<{ $cardBackground?: string }>`
+const AboutMeContainer = styled(Container)`
   max-width: 48rem;
   text-align: left;
-  background: ${({ $cardBackground }) =>
-		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
   backdrop-filter: blur(10px);
   border: none;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
   border-radius: 0.5rem;
   padding: 1.5rem;
   color: inherit;
+  background-color: rgba(31, 41, 55, 0.85);
 `;
 
-export const AboutMe = ({ cardBackground }: SectionProps) => {
+export const AboutMe = () => {
 	return (
 		<AboutMeSectionBlock id="about">
-			<AboutMeContainer $cardBackground={cardBackground}>
+			<AboutMeContainer>
 				<Paragraph>
 					<em>
 						“Give me a lever, a place to stand and well-done investigation, and

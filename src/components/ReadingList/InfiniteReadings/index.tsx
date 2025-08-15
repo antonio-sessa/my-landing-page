@@ -8,14 +8,12 @@ interface InfiniteReadingsProps {
 	initialReadings: Reading[];
 	initialHasMore: boolean;
 	initialCursor: string | null;
-	cardBackground?: string;
 }
 
 export default function InfiniteReadings({
 	initialReadings,
 	initialHasMore,
 	initialCursor,
-	cardBackground,
 }: InfiniteReadingsProps) {
 	const [readings, setReadings] = useState<Reading[]>(initialReadings);
 	const [hasMore, setHasMore] = useState(initialHasMore);
@@ -63,7 +61,7 @@ export default function InfiniteReadings({
 
 	return (
 		<>
-			<ReadingList readings={readings} cardBackground={cardBackground} />
+			<ReadingList readings={readings} />
 			{hasMore && <div ref={loaderRef} style={{ height: "2rem" }} />}
 			{loading && (
 				<div

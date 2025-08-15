@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import type { SectionProps } from "../../../../types/section-pros";
 import CardSubtitle from "../../../Typography/CardSubtitle";
 import CardTitle from "../../../Typography/CardTitle";
 import Description from "../../../Typography/Description";
@@ -20,14 +19,14 @@ const EducationGrid = styled(Grid)`
   }
 `;
 
-export const Education = ({ cardBackground }: SectionProps) => {
+export const Education = () => {
 	return (
 		<SectionBlock id="education">
 			<Container>
 				<SectionTitle>Education</SectionTitle>
 
 				<EducationGrid>
-					<Card $cardBackground={cardBackground}>
+					<Card>
 						<Icon>🎓</Icon>
 						<CardTitle>Master's Degree in Computer Engineering</CardTitle>
 						<CardSubtitle>University of Salerno</CardSubtitle>
@@ -41,7 +40,7 @@ export const Education = ({ cardBackground }: SectionProps) => {
 						</Description>
 					</Card>
 
-					<Card $cardBackground={cardBackground}>
+					<Card>
 						<Icon>🎓</Icon>
 						<CardTitle>Bachelor's Degree in Computer Engineering</CardTitle>
 						<CardSubtitle>University of Salerno</CardSubtitle>

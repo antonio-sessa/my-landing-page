@@ -1,8 +1,5 @@
-"use client";
-
 import styled from "styled-components";
 import type { Reading } from "../../../types/reading";
-import type { SectionProps } from "../../../types/section-pros";
 
 import CardTitle from "../../Typography/CardTitle";
 import Description from "../../Typography/Description";
@@ -15,7 +12,7 @@ import Grid from "../../UI/Grid";
 import SectionBlock from "../../UI/SectionBlock";
 import Tag from "../../UI/Tag";
 
-interface ReadingListProps extends SectionProps {
+interface ReadingListProps {
 	readings: Reading[];
 }
 
@@ -49,7 +46,7 @@ const TopRightBadgeGroup = styled(BadgeGroup)`
   justify-content: flex-end;
 `;
 
-export const ReadingList = ({ cardBackground, readings }: ReadingListProps) => {
+export const ReadingList = ({ readings }: ReadingListProps) => {
 	return (
 		<SectionBlock id="reading-list">
 			<Container>
@@ -65,7 +62,7 @@ export const ReadingList = ({ cardBackground, readings }: ReadingListProps) => {
 							: null;
 
 						return (
-							<ReadingItemCard $cardBackground={cardBackground} key={book.id}>
+							<ReadingItemCard key={book.id}>
 								{book.link ? (
 									<Link
 										href={book.link}

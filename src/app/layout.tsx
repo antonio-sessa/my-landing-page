@@ -1,5 +1,4 @@
 import Script from "next/script";
-import { GlobalStyle } from "../components/GlobalStyle";
 import StyledComponentsRegistry from "./lib/registry";
 
 export default function RootLayout({
@@ -11,10 +10,7 @@ export default function RootLayout({
 		<html lang="en">
 			<head />
 			<body>
-				<StyledComponentsRegistry>
-					<GlobalStyle />
-					{children}
-				</StyledComponentsRegistry>
+				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
 
 				<Script
 					data-cookieconsent="ignore"
@@ -36,7 +32,6 @@ export default function RootLayout({
 					src="https://www.googletagmanager.com/gtag/js?id=GT-MR458Z9"
 					strategy="afterInteractive"
 				/>
-
 				<Script
 					id="cookieyes"
 					type="text/javascript"

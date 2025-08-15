@@ -2,9 +2,8 @@
 
 import styled from "styled-components";
 
-const Card = styled.div<{ $cardBackground?: string }>`
-  background: ${({ $cardBackground }) =>
-		$cardBackground ?? "rgba(31, 41, 55, 0.85)"};
+const Card = styled.div`
+  background: rgba(31, 41, 55, 0.85);
   border-radius: 0.5rem;
   padding: 1.5rem;
   text-align: center;

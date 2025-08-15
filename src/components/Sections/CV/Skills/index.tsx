@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import type { SectionProps } from "../../../../types/section-pros";
 import CardTitle from "../../../Typography/CardTitle";
 import SectionTitle from "../../../Typography/SectionTitle";
 import Card from "../../../UI/Card";
@@ -31,14 +30,14 @@ const SkillsIcon = styled(Icon)`
   flex-shrink: 0;  
 `;
 
-export const Skills = ({ cardBackground }: SectionProps) => {
+export const Skills = () => {
 	return (
 		<SectionBlock id="skills">
 			<Container>
 				<SectionTitle>Skills & Expertise</SectionTitle>
 
 				<Grid>
-					<SkillsCard $cardBackground={cardBackground}>
+					<SkillsCard>
 						<CardHeader>
 							<SkillsCardTitle>
 								<SkillsIcon>🧪</SkillsIcon> Hard skills
@@ -57,7 +56,7 @@ export const Skills = ({ cardBackground }: SectionProps) => {
 						</TagGroup>
 					</SkillsCard>
 
-					<SkillsCard $cardBackground={cardBackground}>
+					<SkillsCard>
 						<CardHeader>
 							<SkillsCardTitle>
 								<SkillsIcon>🧪</SkillsIcon> Soft skills
@@ -74,7 +73,7 @@ export const Skills = ({ cardBackground }: SectionProps) => {
 						</TagGroup>
 					</SkillsCard>
 
-					<SkillsCard $cardBackground={cardBackground}>
+					<SkillsCard>
 						<CardHeader>
 							<SkillsCardTitle>
 								<SkillsIcon>💻</SkillsIcon> Used technologies

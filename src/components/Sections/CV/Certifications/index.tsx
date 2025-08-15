@@ -1,6 +1,3 @@
-"use client";
-
-import type { SectionProps } from "../../../../types/section-pros";
 import CardSubtitle from "../../../Typography/CardSubtitle";
 import CardTitle from "../../../Typography/CardTitle";
 import SectionTitle from "../../../Typography/SectionTitle";
@@ -11,14 +8,14 @@ import Grid from "../../../UI/Grid";
 import Icon from "../../../UI/Icon";
 import SectionBlock from "../../../UI/SectionBlock";
 
-export const Certifications = ({ cardBackground }: SectionProps) => {
+export const Certifications = () => {
 	return (
 		<SectionBlock id="certifications">
 			<Container>
 				<SectionTitle>Certifications & Achievements</SectionTitle>
 
 				<Grid>
-					<Card $cardBackground={cardBackground}>
+					<Card>
 						<Icon>🔖</Icon>
 						<CardTitle>
 							ISTQB® Automation Engineer
@@ -31,7 +28,7 @@ export const Certifications = ({ cardBackground }: SectionProps) => {
 						<Badge>Dec 2023</Badge>
 					</Card>
 
-					<Card $cardBackground={cardBackground}>
+					<Card>
 						<Icon>🔖</Icon>
 						<CardTitle>
 							ISTQB® Foundation Level
@@ -44,7 +41,7 @@ export const Certifications = ({ cardBackground }: SectionProps) => {
 						<Badge>Jul 2023</Badge>
 					</Card>
 
-					<Card $cardBackground={cardBackground}>
+					<Card>
 						<Icon>🔖</Icon>
 						<CardTitle>
 							Professional Scrum Master I<br />
@@ -54,7 +51,7 @@ export const Certifications = ({ cardBackground }: SectionProps) => {
 						<Badge>Mar 2020</Badge>
 					</Card>
 
-					<Card $cardBackground={cardBackground}>
+					<Card>
 						<Icon>📜</Icon>
 						<CardTitle>
 							First Certificate in English (FCE)
@@ -65,7 +62,7 @@ export const Certifications = ({ cardBackground }: SectionProps) => {
 						<Badge>Jul 2015</Badge>
 					</Card>
 
-					<Card $cardBackground={cardBackground}>
+					<Card>
 						<Icon>🎓</Icon>
 						<CardTitle>
 							Engineering practice License
