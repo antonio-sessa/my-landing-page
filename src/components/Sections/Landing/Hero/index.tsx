@@ -1,9 +1,14 @@
 "use client";
 
-import { Racing_Sans_One } from "next/font/google";
+import { Racing_Sans_One, Roboto } from "next/font/google";
 import styled from "styled-components";
 
 export const racingSansOne = Racing_Sans_One({
+	weight: "400",
+	subsets: ["latin"],
+});
+
+export const roboto = Roboto({
 	weight: "400",
 	subsets: ["latin"],
 });
@@ -103,6 +108,7 @@ const SubTitle = styled.h2`
   animation-name: fadeInUp;
 
   font-size: 1.5em;
+  ${roboto.style}
 
   @media (max-width: 767px) {
     font-size: 1.2em;

@@ -27,7 +27,7 @@ export const ReadingListHeader = () => {
 	return (
 		<HeaderContainer>
 			<Link href="/" aria-label="Back to CV">
-				<BackLink>&larr; Back to CV</BackLink>
+				<BackLink>&larr; Back to Home</BackLink>
 			</Link>
 		</HeaderContainer>
 	);

@@ -1,9 +1,9 @@
-import { Roboto } from "next/font/google";
+import { Figtree } from "next/font/google";
 import { createGlobalStyle } from "styled-components";
 
-export const roboto = Roboto({
-	weight: "400",
+export const figtree = Figtree({
 	subsets: ["latin"],
+	weight: "400",
 });
 
 export const GlobalStyle = createGlobalStyle`
@@ -37,7 +37,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  ${roboto.style}
+  ${figtree.style}
 }
 
 a {

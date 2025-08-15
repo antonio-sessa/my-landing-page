@@ -32,11 +32,6 @@ const links = [
 		url: "https://www.instagram.com/antony_sex/",
 		image: `${imageRootPath}/instagram.png`,
 	},
-	{
-		name: "Unstoppable Domains",
-		url: "https://ud.me/antoniosessa.nft",
-		image: `${imageRootPath}/unstoppable-domains.png`,
-	},
 ];
 
 const LinksSection = styled.section`

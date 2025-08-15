@@ -15,8 +15,6 @@ const ContentContainer = styled.main`
   background-color: #0f172a; /* Deep slate (cool dark) */
   color: #d1d5db;            /* Light gray text */
 
-  font-family: system-ui, sans-serif;
-
   h1, h2, h3, h4, h5, h6 {
     color: #f9fafb; /* Bright heading color */
     margin-top: 0;
