@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function GET() {
 	// Await to get the ReadonlyHeaders object
 	const h = await headers();
-	const host = h.get("host") ?? "antoniosessa.com";
+	const host = h.get("host") ?? process.env.NEXT_PUBLIC_APP_DOMAIN;
 	const protocol = h.get("x-forwarded-proto") ?? "https";
 	const baseUrl = `${protocol}://${host}`;
 
