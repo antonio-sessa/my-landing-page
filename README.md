@@ -42,8 +42,8 @@ NEXT_PUBLIC_APP_DOMAIN=your_domain
 NOTION_API_KEY=your_notion_integration_secret
 NOTION_DATABASE_ID=your_database_id
 KV_URL=your_redis_url
-UPSTASH_REDIS_REST_URL=<your_upstash_redis_url
-UPSTASH_REDIS_REST_TOKEN=<your_upstash_redis_token
+UPSTASH_REDIS_REST_URL=your_upstash_redis_url
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
 ```
 
 ## Deploy on Vercel
