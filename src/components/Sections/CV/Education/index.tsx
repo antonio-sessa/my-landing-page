@@ -3,15 +3,15 @@
 import styled from "styled-components";
 import CardSubtitle from "../../../Typography/CardSubtitle";
 import CardTitle from "../../../Typography/CardTitle";
-import Description from "../../../Typography/Description";
+import Paragraph from "../../../Typography/Paragraph";
 import SectionTitle from "../../../Typography/SectionTitle";
+import Tag from "../../../Typography/Tag";
 import BadgeGroup from "../../../UI/BadgeGroup";
 import Card from "../../../UI/Card";
 import Container from "../../../UI/Container";
 import Grid from "../../../UI/Grid";
 import Icon from "../../../UI/Icon";
 import SectionBlock from "../../../UI/SectionBlock";
-import Tag from "../../../UI/Tag";
 
 const EducationGrid = styled(Grid)`
   @media (min-width: 768px) {
@@ -34,10 +34,10 @@ export const Education = () => {
 							<Tag>2013 – 2015</Tag>
 							<Tag label="Grade:">110 / 110</Tag>
 						</BadgeGroup>
-						<Description>
+						<Paragraph>
 							Final exam: “Graph matching algorithms for Social Network
 							Analysis”
-						</Description>
+						</Paragraph>
 					</Card>
 
 					<Card>
@@ -48,10 +48,10 @@ export const Education = () => {
 							<Tag>2008 – 2013</Tag>
 							<Tag label="Grade:">99 / 110</Tag>
 						</BadgeGroup>
-						<Description>
+						<Paragraph>
 							Final exam: "Searching for relationships between users in a
 							learning community using SNA techniques"
-						</Description>
+						</Paragraph>
 					</Card>
 				</EducationGrid>
 			</Container>

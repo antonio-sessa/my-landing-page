@@ -1,23 +1,23 @@
 "use client";
 
 import styled from "styled-components";
+import Badge from "../../../Typography/Badge";
 import CardTitle from "../../../Typography/CardTitle";
-import List from "../../../Typography/List";
+import { Link } from "../../../Typography/Link";
 import Mark from "../../../Typography/Mark";
 import SectionTitle from "../../../Typography/SectionTitle";
-import Badge from "../../../UI/Badge";
 import Card from "../../../UI/Card";
-import CardHeader from "../../../UI/CardHeader";
 import CardList from "../../../UI/CardList";
 import CompanyLogo from "../../../UI/CompanyLogo";
 import Container from "../../../UI/Container";
+import List from "../../../UI/List";
 import SectionBlock from "../../../UI/SectionBlock";
 
 const ExperienceCard = styled(Card)`
   text-align: left;
 `;
 
-const ExperienceCardHeader = styled(CardHeader)`
+const ExperienceCardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -46,7 +46,7 @@ export const Experience = () => {
 								<CardTitle>Senior QA Engineer</CardTitle>
 
 								<CompanyLogo
-									src="/media/images/logos/prontopro.png"
+									src="/media/logos/prontopro.png"
 									alt="ProntoPro S.r.l."
 									href="https://www.prontopro.it"
 								/>
@@ -56,13 +56,13 @@ export const Experience = () => {
 						<List>
 							<li>
 								Currently <Mark>Senior Engineer S2</Mark>, accordingly to this{" "}
-								<a
+								<Link
 									href="https://homeruntech.notion.site/Career-Path-a52844ab8ee34c87a24fd8759b701e12"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
 									Career Path
-								</a>
+								</Link>
 							</li>
 							<li>
 								<Mark>Support Product and technical roadmaps definition</Mark>
@@ -96,7 +96,7 @@ export const Experience = () => {
 								<CardTitle>QA Engineer</CardTitle>
 
 								<CompanyLogo
-									src="/media/images/logos/prontopro.png"
+									src="/media/logos/prontopro.png"
 									alt="ProntoPro S.r.l."
 									href="https://www.prontopro.it"
 								/>
@@ -105,13 +105,13 @@ export const Experience = () => {
 						</ExperienceCardHeader>
 						<List>
 							<li>
-								<a
+								<Link
 									href="https://basecamp.com/shapeup"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
 									<Mark>Shift-Left approach</Mark>
-								</a>{" "}
+								</Link>{" "}
 								to ensure consistency and solidity of applications during new
 								features design processes
 							</li>
@@ -134,7 +134,7 @@ export const Experience = () => {
 								<CardTitle>QA Test Lead and Business Analyst</CardTitle>
 
 								<CompanyLogo
-									src="/media/images/logos/sky.png"
+									src="/media/logos/sky.png"
 									alt="Sky Italia S.r.l."
 									href="https://www.sky.it"
 								/>
@@ -170,7 +170,7 @@ export const Experience = () => {
 								<CardTitle>QA Test Engineer</CardTitle>
 
 								<CompanyLogo
-									src="/media/images/logos/sky.png"
+									src="/media/logos/sky.png"
 									alt="Sky Italia S.r.l."
 									href="https://www.sky.it"
 								/>

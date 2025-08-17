@@ -4,7 +4,6 @@ const List = styled.ul`
   font-size: 1rem;
   padding-left: 1.25rem;
   margin-bottom: 1rem;
-  color: #e5e7eb;
 
   li {
     margin-bottom: 0.5rem;
@@ -15,7 +14,6 @@ const List = styled.ul`
     &::before {
       position: absolute;
       left: 0;
-      color: #60a5fa;
     }
   }
 `;

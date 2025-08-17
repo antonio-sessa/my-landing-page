@@ -9,7 +9,7 @@ export const racingSansOne = Racing_Sans_One({
 	subsets: ["latin"],
 });
 
-const imageRootPath = "/media/images/logos";
+const imageRootPath = "/media/logos";
 
 const links = [
 	{

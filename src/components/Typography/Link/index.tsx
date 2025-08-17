@@ -4,15 +4,14 @@ const StyledLink = styled.a.attrs(() => ({
 	target: "_blank",
 	rel: "noopener noreferrer",
 }))`
-  color: #60a5fa; 
-  text-decoration: none;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: underline;
 
-  &:hover,
   &:focus {
     text-decoration: underline;
     outline: none;
+  	box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
   }
 `;
 

@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-const CardSubtitle = styled.div`
+const CardSubtitle = styled.h4`
   display: flex;
   align-items: center;  
   justify-content: center;

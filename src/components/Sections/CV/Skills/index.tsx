@@ -3,13 +3,12 @@
 import styled from "styled-components";
 import CardTitle from "../../../Typography/CardTitle";
 import SectionTitle from "../../../Typography/SectionTitle";
+import Tag from "../../../Typography/Tag";
 import Card from "../../../UI/Card";
-import CardHeader from "../../../UI/CardHeader";
 import Container from "../../../UI/Container";
 import Grid from "../../../UI/Grid";
 import Icon from "../../../UI/Icon";
 import SectionBlock from "../../../UI/SectionBlock";
-import Tag from "../../../UI/Tag";
 import TagGroup from "../../../UI/TagGroup";
 
 const SkillsCard = styled(Card)`
@@ -22,6 +21,7 @@ const SkillsCardTitle = styled(CardTitle)`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 1.5rem 1.5rem 0;
 `;
 
 const SkillsIcon = styled(Icon)`
@@ -38,11 +38,9 @@ export const Skills = () => {
 
 				<Grid>
 					<SkillsCard>
-						<CardHeader>
-							<SkillsCardTitle>
-								<SkillsIcon>🧪</SkillsIcon> Hard skills
-							</SkillsCardTitle>
-						</CardHeader>
+						<SkillsCardTitle>
+							<SkillsIcon>🧪</SkillsIcon> Hard skills
+						</SkillsCardTitle>
 
 						<TagGroup>
 							<Tag highlighted>Debugging</Tag>
@@ -52,16 +50,15 @@ export const Skills = () => {
 							<Tag>Reporting and KPIs</Tag>
 							<Tag>User experience</Tag>
 							<Tag highlighted>Manual and Automated tests</Tag>
-							<Tag highlighted>No Regression and Acceptance tests</Tag>
+							<Tag highlighted>No Regression tests</Tag>
+							<Tag highlighted>Acceptance tests</Tag>
 						</TagGroup>
 					</SkillsCard>
 
 					<SkillsCard>
-						<CardHeader>
-							<SkillsCardTitle>
-								<SkillsIcon>🧪</SkillsIcon> Soft skills
-							</SkillsCardTitle>
-						</CardHeader>
+						<SkillsCardTitle>
+							<SkillsIcon>🧪</SkillsIcon> Soft skills
+						</SkillsCardTitle>
 
 						<TagGroup>
 							<Tag highlighted>Teamwork</Tag>
@@ -74,11 +71,9 @@ export const Skills = () => {
 					</SkillsCard>
 
 					<SkillsCard>
-						<CardHeader>
-							<SkillsCardTitle>
-								<SkillsIcon>💻</SkillsIcon> Used technologies
-							</SkillsCardTitle>
-						</CardHeader>
+						<SkillsCardTitle>
+							<SkillsIcon>💻</SkillsIcon> Used technologies
+						</SkillsCardTitle>
 
 						<TagGroup>
 							<Tag>Asana</Tag>
