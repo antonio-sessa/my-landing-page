@@ -13,21 +13,6 @@ const ContentContainer = styled.main`
 
     /* Elegant, eye-friendly dark background */
   background-color: #0f172a; /* Deep slate (cool dark) */
-  color: #d1d5db;            /* Light gray text */
-
-  h1, h2, h3, h4, h5, h6 {
-    color: #f9fafb; /* Bright heading color */
-    margin-top: 0;
-  }
-
-  a {
-    color: #f9fafb;            /* bright white */
-    text-decoration: underline;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 
   > * {
     width: 100%;

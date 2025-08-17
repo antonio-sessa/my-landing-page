@@ -9,7 +9,7 @@ interface FetchOptions {
 	startCursor?: string;
 }
 
-export async function fetchNotionReadingList({
+export async function fetchReadingList({
 	pageSize = 5,
 	startCursor,
 }: FetchOptions = {}): Promise<{

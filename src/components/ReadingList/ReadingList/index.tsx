@@ -1,16 +1,15 @@
 import styled from "styled-components";
 import type { Reading } from "../../../types/reading";
-
 import CardTitle from "../../Typography/CardTitle";
-import Description from "../../Typography/Description";
 import { Link } from "../../Typography/Link";
+import Paragraph from "../../Typography/Paragraph";
 import SectionTitle from "../../Typography/SectionTitle";
+import Tag from "../../Typography/Tag";
 import BadgeGroup from "../../UI/BadgeGroup";
 import Card from "../../UI/Card";
 import Container from "../../UI/Container";
 import Grid from "../../UI/Grid";
 import SectionBlock from "../../UI/SectionBlock";
-import Tag from "../../UI/Tag";
 
 interface ReadingListProps {
 	readings: Reading[];
@@ -36,14 +35,8 @@ const ReadingItemCard = styled(Card)`
   box-sizing: border-box;
 `;
 
-const TopRightBadgeGroup = styled(BadgeGroup)`
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-
-  min-width: unset;
-  margin-top: 0;
-  justify-content: flex-end;
+const Summary = styled(Paragraph)`
+  white-space: pre-wrap;
 `;
 
 export const ReadingList = ({ readings }: ReadingListProps) => {
@@ -55,7 +48,7 @@ export const ReadingList = ({ readings }: ReadingListProps) => {
 				<ReadingGrid>
 					{readings.map((book) => {
 						const formattedDate = book.createdAt
-							? new Date(book.createdAt).toLocaleDateString(undefined, {
+							? new Date(book.createdAt).toLocaleDateString("en-US", {
 									year: "numeric",
 									month: "short",
 								})
@@ -79,16 +72,16 @@ export const ReadingList = ({ readings }: ReadingListProps) => {
 								)}
 
 								{book.summary && (
-									<Description style={{ marginTop: "0.25rem" }}>
+									<Summary style={{ marginTop: "0.25rem" }}>
 										{book.summary}
-									</Description>
+									</Summary>
 								)}
 
 								{(book.status || formattedDate) && (
-									<TopRightBadgeGroup align="right">
+									<BadgeGroup align="right">
 										{book.status && <Tag>{book.status}</Tag>}
 										{formattedDate && <Tag>{formattedDate}</Tag>}
-									</TopRightBadgeGroup>
+									</BadgeGroup>
 								)}
 							</ReadingItemCard>
 						);

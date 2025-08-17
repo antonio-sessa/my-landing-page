@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import { Link } from "../../../Typography/Link";
 import Paragraph from "../../../Typography/Paragraph";
 import Container from "../../../UI/Container";
 import SectionBlock from "../../../UI/SectionBlock";
@@ -21,32 +22,39 @@ const AboutMeContainer = styled(Container)`
   background-color: rgba(31, 41, 55, 0.85);
 `;
 
+const AboutMeParagraph = styled(Paragraph)`
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #e5e7eb;
+  margin-bottom: 0.9rem;
+`;
+
 export const AboutMe = () => {
 	return (
 		<AboutMeSectionBlock id="about">
 			<AboutMeContainer>
-				<Paragraph>
+				<AboutMeParagraph>
 					<em>
 						“Give me a lever, a place to stand and well-done investigation, and
 						I will move the earth.”
 					</em>{" "}
 					- Archimedes’ semi-cit.
-				</Paragraph>
-				<Paragraph>
+				</AboutMeParagraph>
+				<AboutMeParagraph>
 					I was born as tireless curious. I’m a proactive guy, used to knowledge
 					sharing and receiving feedbacks (whether positive or negative).
-				</Paragraph>
-				<Paragraph>
+				</AboutMeParagraph>
+				<AboutMeParagraph>
 					In my spare time I enjoy{" "}
-					<a
+					<Link
 						href="https://unsplash.com/it/@antony_sex"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						capturing
-					</a>{" "}
+					</Link>{" "}
 					the beauty around me, and deep dive in the world of personal finance.
-				</Paragraph>
+				</AboutMeParagraph>
 			</AboutMeContainer>
 		</AboutMeSectionBlock>
 	);
