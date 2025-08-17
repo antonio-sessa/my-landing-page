@@ -11,6 +11,7 @@ const StyledLink = styled.a.attrs(() => ({
   &:focus {
     text-decoration: underline;
     outline: none;
+  	box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
   }
 `;
 
