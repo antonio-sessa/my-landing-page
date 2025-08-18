@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Content } from "../../components/Content";
 import { Footer } from "../../components/Footer";
-import InfiniteReadings from "../../components/ReadingList/InfiniteReadings";
-import { ReadingListHeader } from "../../components/ReadingList/ReadingListHeader";
+import InfiniteReadings from "../../components/Sections/ReadingList/InfiniteReadings";
+import { ReadingListHeader } from "../../components/Sections/ReadingList/ReadingListHeader";
 import { getCachedReadingListBatch } from "../../lib/cacheReadingList";
 import { getBaseUrl } from "../../lib/getBaseUrl";
 

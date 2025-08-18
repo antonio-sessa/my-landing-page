@@ -4,7 +4,7 @@ import Image from "next/image";
 import type { PropsWithChildren } from "react";
 import styled from "styled-components";
 
-export const LandingWrapper = styled.main`
+export const LandingWrapper = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;

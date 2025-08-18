@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import type { Reading } from "../../../types/reading";
-import CardTitle from "../../Typography/CardTitle";
-import { Link } from "../../Typography/Link";
-import Paragraph from "../../Typography/Paragraph";
-import SectionTitle from "../../Typography/SectionTitle";
-import Tag from "../../Typography/Tag";
-import BadgeGroup from "../../UI/BadgeGroup";
-import Card from "../../UI/Card";
-import Container from "../../UI/Container";
-import Grid from "../../UI/Grid";
-import SectionBlock from "../../UI/SectionBlock";
+import type { Reading } from "../../../../types/reading";
+import Badge from "../../../Typography/Badge";
+import CardTitle from "../../../Typography/CardTitle";
+import { Link } from "../../../Typography/Link";
+import Paragraph from "../../../Typography/Paragraph";
+import SectionTitle from "../../../Typography/SectionTitle";
+import BadgeGroup from "../../../UI/BadgeGroup";
+import Card from "../../../UI/Card";
+import Container from "../../../UI/Container";
+import Grid from "../../../UI/Grid";
+import SectionBlock from "../../../UI/SectionBlock";
 
 interface ReadingListProps {
 	readings: Reading[];
@@ -78,9 +78,9 @@ export const ReadingList = ({ readings }: ReadingListProps) => {
 								)}
 
 								{(book.status || formattedDate) && (
-									<BadgeGroup align="right">
-										{book.status && <Tag>{book.status}</Tag>}
-										{formattedDate && <Tag>{formattedDate}</Tag>}
+									<BadgeGroup align="center">
+										{formattedDate && <Badge>{formattedDate}</Badge>}
+										{book.status && <Badge>{book.status}</Badge>}
 									</BadgeGroup>
 								)}
 							</ReadingItemCard>

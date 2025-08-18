@@ -1,11 +1,11 @@
 "use client";
 
 import styled from "styled-components";
+import Badge from "../../../Typography/Badge";
 import CardSubtitle from "../../../Typography/CardSubtitle";
 import CardTitle from "../../../Typography/CardTitle";
 import Paragraph from "../../../Typography/Paragraph";
 import SectionTitle from "../../../Typography/SectionTitle";
-import Tag from "../../../Typography/Tag";
 import BadgeGroup from "../../../UI/BadgeGroup";
 import Card from "../../../UI/Card";
 import Container from "../../../UI/Container";
@@ -31,8 +31,8 @@ export const Education = () => {
 						<CardTitle>Master's Degree in Computer Engineering</CardTitle>
 						<CardSubtitle>University of Salerno</CardSubtitle>
 						<BadgeGroup>
-							<Tag>2013 – 2015</Tag>
-							<Tag label="Grade:">110 / 110</Tag>
+							<Badge>2013 – 2015</Badge>
+							<Badge>Grade: 110 / 110</Badge>
 						</BadgeGroup>
 						<Paragraph>
 							Final exam: “Graph matching algorithms for Social Network
@@ -45,8 +45,8 @@ export const Education = () => {
 						<CardTitle>Bachelor's Degree in Computer Engineering</CardTitle>
 						<CardSubtitle>University of Salerno</CardSubtitle>
 						<BadgeGroup>
-							<Tag>2008 – 2013</Tag>
-							<Tag label="Grade:">99 / 110</Tag>
+							<Badge>2008 – 2013</Badge>
+							<Badge>Grade: 99 / 110</Badge>
 						</BadgeGroup>
 						<Paragraph>
 							Final exam: "Searching for relationships between users in a
