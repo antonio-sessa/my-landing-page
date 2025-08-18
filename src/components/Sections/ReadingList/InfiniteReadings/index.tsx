@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Reading } from "../../../types/reading";
+import type { Reading } from "../../../../types/reading";
 import { ReadingList } from "../ReadingList";
 
 interface InfiniteReadingsProps {
