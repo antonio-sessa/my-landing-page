@@ -9,11 +9,12 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<head />
+			<head>
+				<CookieYes />
+			</head>
 			<body>
 				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
 				<GoogleAnalytics />
-				<CookieYes />
 			</body>
 		</html>
 	);
