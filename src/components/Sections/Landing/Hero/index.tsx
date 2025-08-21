@@ -62,6 +62,7 @@ const Title = styled.h1`
 
   font-size: 3.5em;
   ${racingSansOne.style}
+  color: #f9fafb;
 
   @media (max-width: 767px) {
     font-size: 2.5em;
@@ -109,6 +110,7 @@ const SubTitle = styled.h2`
 
   font-size: 1.5em;
   ${roboto.style}
+  color: #f9fafb;
 
   @media (max-width: 767px) {
     font-size: 1.2em;
