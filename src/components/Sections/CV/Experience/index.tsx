@@ -47,7 +47,7 @@ export const Experience = () => {
 								<CardTitle>Senior QA Engineer</CardTitle>
 
 								<CompanyLogo
-									src="/media/logos/prontopro.png"
+									src="/media/logos/prontopro.webp"
 									alt="ProntoPro S.r.l."
 									href="https://www.prontopro.it"
 								/>
@@ -97,7 +97,7 @@ export const Experience = () => {
 								<CardTitle>QA Engineer</CardTitle>
 
 								<CompanyLogo
-									src="/media/logos/prontopro.png"
+									src="/media/logos/prontopro.webp"
 									alt="ProntoPro S.r.l."
 									href="https://www.prontopro.it"
 								/>
@@ -137,7 +137,7 @@ export const Experience = () => {
 								<CardTitle>QA Test Lead and Business Analyst</CardTitle>
 
 								<CompanyLogo
-									src="/media/logos/sky.png"
+									src="/media/logos/sky.webp"
 									alt="Sky Italia S.r.l."
 									href="https://www.sky.it"
 								/>
@@ -177,7 +177,7 @@ export const Experience = () => {
 								<CardTitle>QA Test Engineer</CardTitle>
 
 								<CompanyLogo
-									src="/media/logos/sky.png"
+									src="/media/logos/sky.webp"
 									alt="Sky Italia S.r.l."
 									href="https://www.sky.it"
 								/>

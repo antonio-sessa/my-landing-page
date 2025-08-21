@@ -15,22 +15,22 @@ const links = [
 	{
 		name: "Linkedin",
 		url: "https://www.linkedin.com/in/antoniosessa/",
-		image: `${imageRootPath}/linkedin.png`,
+		image: `${imageRootPath}/linkedin.webp`,
 	},
 	{
 		name: "GitHub",
 		url: "https://github.com/antonio-sessa",
-		image: `${imageRootPath}/github.png`,
+		image: `${imageRootPath}/github.webp`,
 	},
 	{
 		name: "Unsplash",
 		url: "https://unsplash.com/@antony_sex",
-		image: `${imageRootPath}/unsplash.png`,
+		image: `${imageRootPath}/unsplash.webp`,
 	},
 	{
 		name: "Instagram",
 		url: "https://www.instagram.com/antony_sex/",
-		image: `${imageRootPath}/instagram.png`,
+		image: `${imageRootPath}/instagram.webp`,
 	},
 ];
 
