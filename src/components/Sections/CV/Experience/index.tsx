@@ -11,6 +11,7 @@ import CardList from "../../../UI/CardList";
 import CompanyLogo from "../../../UI/CompanyLogo";
 import Container from "../../../UI/Container";
 import List from "../../../UI/List";
+import ListItem from "../../../UI/ListItem";
 import SectionBlock from "../../../UI/SectionBlock";
 
 const ExperienceCard = styled(Card)`
@@ -54,7 +55,7 @@ export const Experience = () => {
 							<Badge>Jan 2024 - Present</Badge>
 						</ExperienceCardHeader>
 						<List>
-							<li>
+							<ListItem>
 								Currently <Mark>Senior Engineer S2</Mark>, accordingly to this{" "}
 								<Link
 									href="https://homeruntech.notion.site/Career-Path-a52844ab8ee34c87a24fd8759b701e12"
@@ -63,30 +64,30 @@ export const Experience = () => {
 								>
 									Career Path
 								</Link>
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								<Mark>Support Product and technical roadmaps definition</Mark>
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								Implementation of a <Mark>Company Status Page</Mark> to manage
 								and monitor alerts
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								Experience with working with highly scalable, maintainable code
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								Development of a <Mark>toolkit in Typescript</Mark> to generate
 								test scenarios, <Mark>orchestrated in AWS Lambda</Mark> and
 								<Mark>monitored via CloudWatch + Slack</Mark>
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								Experience with <Mark>GitHub Actions</Mark> and containerised
 								environment (Docker)
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								Dialogue with Customer Care and Customer Experience teams, to
 								provide mitigations and report bugs to the Engineering team
-							</li>
+							</ListItem>
 						</List>
 					</ExperienceCard>
 
@@ -104,7 +105,7 @@ export const Experience = () => {
 							<Badge>May 2022 - Dec 2023</Badge>
 						</ExperienceCardHeader>
 						<List>
-							<li>
+							<ListItem>
 								<Link
 									href="https://basecamp.com/shapeup"
 									target="_blank"
@@ -114,17 +115,19 @@ export const Experience = () => {
 								</Link>{" "}
 								to ensure consistency and solidity of applications during new
 								features design processes
-							</li>
-							<li>Active participation to backlog refining process</li>
-							<li>
+							</ListItem>
+							<ListItem>
+								Active participation to backlog refining process
+							</ListItem>
+							<ListItem>
 								<Mark>
 									Validation and verification of new features developed
 								</Mark>
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								Design and coding of an <Mark>automated e2e test suite</Mark>
 								(Cypress/WebdriverIO)
-							</li>
+							</ListItem>
 						</List>
 					</ExperienceCard>
 
@@ -142,25 +145,29 @@ export const Experience = () => {
 							<Badge>Jan 2017 - May 2022</Badge>
 						</ExperienceCardHeader>
 						<List>
-							<li>
+							<ListItem>
 								<Mark>Monitoring a manual testers group</Mark>
-							</li>
-							<li>Functional tests design and use cases development</li>
-							<li>
+							</ListItem>
+							<ListItem>
+								Functional tests design and use cases development
+							</ListItem>
+							<ListItem>
 								<Mark>Activities cost estimation</Mark> - both man-days and
 								equipment
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								Process management, analysis and validation results export
-							</li>
-							<li>Exchanges with PO about final Customer Experience</li>
-							<li>
+							</ListItem>
+							<ListItem>
+								Exchanges with PO about final Customer Experience
+							</ListItem>
+							<ListItem>
 								Verification and analysis management of Field Trial feedbacks
-							</li>
-							<li>
+							</ListItem>
+							<ListItem>
 								<Mark>Supporting Incident Management activities</Mark> coming
 								from Sky Go Real Customers
-							</li>
+							</ListItem>
 						</List>
 					</ExperienceCard>
 
@@ -178,10 +185,10 @@ export const Experience = () => {
 							<Badge>Sep 2015 - Jan 2017</Badge>
 						</ExperienceCardHeader>
 						<List>
-							<li>
+							<ListItem>
 								Software validation and verification of satellite transmission
 								devices, using Agile methodology.
-							</li>
+							</ListItem>
 						</List>
 					</ExperienceCard>
 				</CardList>
