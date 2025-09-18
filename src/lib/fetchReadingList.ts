@@ -17,13 +17,13 @@ export async function fetchReadingList({
 	hasMore: boolean;
 	nextCursor?: string;
 }> {
-	const databaseId = process.env.NOTION_DATABASE_ID;
-	if (!databaseId) {
-		throw new Error("NOTION_DATABASE_ID is not set");
+	const dataSourceId = process.env.NOTION_DATA_SOURCE_ID;
+	if (!dataSourceId) {
+		throw new Error("NOTION_DATA_SOURCE_ID is not set");
 	}
 
-	const response = await notion.databases.query({
-		database_id: databaseId,
+	const response = await notion.dataSources.query({
+		data_source_id: dataSourceId,
 		page_size: pageSize,
 		...(startCursor ? { start_cursor: startCursor } : {}),
 		sorts: [{ property: "CreatedAt", direction: "descending" }],
