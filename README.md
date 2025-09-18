@@ -40,7 +40,7 @@ Configure the following variables in your `.env.local` file:
 ```bash
 NEXT_PUBLIC_APP_DOMAIN=your_domain
 NOTION_API_KEY=your_notion_integration_secret
-NOTION_DATABASE_ID=your_database_id
+NOTION_DATA_SOURCE_ID=your_data_source_id
 KV_URL=your_redis_url
 UPSTASH_REDIS_REST_URL=your_upstash_redis_url
 UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
