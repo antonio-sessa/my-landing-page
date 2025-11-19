@@ -29,5 +29,8 @@
 		"@swc/core": "^1.13.3",
 		"globby": "^14.1.0",
 		"styled-formatter": "^1.1.5"
+	},
+	"resolutions": {
+		"glob": "^9.0.0"
 	}
 }
