@@ -20,7 +20,7 @@
 		"browserslist": "^4.25.1",
 		"next": "15.4.7",
 		"react": "^19.1.1",
-		"react-dom": "19.1.1",
+		"react-dom": "^19.1.1",
 		"styled-components": "^6.1.19",
 		"typescript": "^5.9.2"
 	},
@@ -29,5 +29,8 @@
 		"@swc/core": "^1.13.3",
 		"globby": "^14.1.0",
 		"styled-formatter": "^1.1.5"
+	},
+	"overrides": {
+		"glob": "^9.0.0"
 	}
 }
