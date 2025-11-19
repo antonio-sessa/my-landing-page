@@ -30,7 +30,7 @@
 		"globby": "^14.1.0",
 		"styled-formatter": "^1.1.5"
 	},
-	"resolutions": {
+	"overrides": {
 		"glob": "^9.0.0"
 	}
 }
