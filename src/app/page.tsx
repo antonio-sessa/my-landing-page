@@ -21,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
 	const title =
 		"Antonio Sessa - Passionate Senior QA Engineer and Photographer";
 	const description =
-		"Discover how my passion for Quality Assurance drives dynamic teams, fosters creativity, and delivers exceptional results. Currently based in Milan, IT.";
+		"Senior QA Engineer with 10 years of experience building quality into products - from Sky's streaming infrastructure to ProntoPro's test tooling. Based in Milan.";
 
 	return {
 		title,
