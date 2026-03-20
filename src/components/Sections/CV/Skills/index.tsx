@@ -47,7 +47,7 @@ export const Skills = () => {
 				<SkillsGrid>
 					<SkillsCard>
 						<SkillsCardTitle>
-							<SkillsIcon>🧪</SkillsIcon> Core expertise
+							<SkillsIcon>🎯</SkillsIcon> Core expertise
 						</SkillsCardTitle>
 
 						<BadgeGroup align="left">

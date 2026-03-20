@@ -69,7 +69,7 @@ export const Experience = () => {
 								<Mark>Senior Engineer S2</Mark>
 							</Link>
 							, I now sit at the intersection of product, engineering, and
-							reliability — contributing to both technical and product roadmaps
+							reliability - contributing to both technical and product roadmaps
 							and acting as a bridge between Customer Care and Engineering.
 						</NarrativeText>
 						<List>
@@ -183,7 +183,7 @@ export const Experience = () => {
 							My professional starting point: validating and verifying satellite
 							transmission devices in an <Mark>Agile</Mark> environment. This
 							role gave me a rigorous foundation in structured software testing
-							and taught me to work methodically under delivery pressure — a
+							and taught me to work methodically under delivery pressure - a
 							mindset I've carried through every role since.
 						</NarrativeText>
 					</ExperienceCard>
