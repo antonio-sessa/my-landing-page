@@ -18,8 +18,7 @@ import { getBaseUrl } from "../lib/getBaseUrl";
 export async function generateMetadata(): Promise<Metadata> {
 	const baseUrl = await getBaseUrl();
 
-	const title =
-		"Antonio Sessa - Passionate Senior QA Engineer and Photographer";
+	const title = "Antonio Sessa - Senior QA Engineer & Photographer";
 	const description =
 		"Senior QA Engineer with 10 years of experience building quality into products - from Sky's streaming infrastructure to ProntoPro's test tooling. Based in Milan.";
 
