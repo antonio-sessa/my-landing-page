@@ -68,7 +68,7 @@ export const Experience = () => {
 							>
 								<Mark>Senior Engineer S2</Mark>
 							</Link>
-							, I now sit at the intersection of product, engineering, and
+							, now I sit at the intersection of product, engineering, and
 							reliability - contributing to both technical and product roadmaps
 							and acting as a bridge between Customer Care and Engineering.
 						</NarrativeText>
