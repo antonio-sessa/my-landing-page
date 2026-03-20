@@ -1,5 +1,6 @@
 import { CookieYes } from "../components/CookieYes";
 import { GoogleAnalytics } from "../components/GoogleAnalytics";
+import { Nav } from "../components/Nav";
 import StyledComponentsRegistry from "./lib/registry";
 
 export default function RootLayout({
@@ -13,7 +14,10 @@ export default function RootLayout({
 				<CookieYes />
 			</head>
 			<body>
-				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+				<StyledComponentsRegistry>
+					<Nav />
+					{children}
+				</StyledComponentsRegistry>
 				<GoogleAnalytics />
 			</body>
 		</html>

@@ -5,6 +5,7 @@ import styled from "styled-components";
 const SectionBlock = styled.section`
   padding: 2rem 1rem;
   width: 100%;
+  scroll-margin-top: 60px;
 `;
 
 export default SectionBlock;
