@@ -101,38 +101,6 @@ const ProficiencyBadge = styled.span<{
 	}}
 `;
 
-const Legend = styled.div`
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-  flex-wrap: wrap;
-`;
-
-const LegendItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.75rem;
-  opacity: 0.6;
-`;
-
-const LegendDot = styled.span<{ $level: "Expert" | "Proficient" | "Familiar" }>`
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  ${({ $level }) => {
-		switch ($level) {
-			case "Expert":
-				return "background: #4ade80;";
-			case "Proficient":
-				return "background: #60a5fa;";
-			case "Familiar":
-				return "background: #94a3b8;";
-		}
-	}}
-`;
-
 type Skill = { name: string; level: "Expert" | "Proficient" | "Familiar" };
 
 const coreExpertise: Skill[] = [
@@ -147,21 +115,18 @@ const coreExpertise: Skill[] = [
 	{ name: "User experience", level: "Expert" },
 ];
 
-const testingFrameworks: Skill[] = [
+const toolsAndTesting: Skill[] = [
 	{ name: "Cypress", level: "Proficient" },
 	{ name: "WebdriverIO", level: "Familiar" },
+	{ name: "Postman", level: "Proficient" },
+	{ name: "Play Console", level: "Expert" },
+	{ name: "App Store Connect", level: "Expert" },
 ];
 
 const cloudMonitoring: Skill[] = [
 	{ name: "AWS Lambda", level: "Proficient" },
 	{ name: "CloudWatch", level: "Proficient" },
 	{ name: "Datadog", level: "Expert" },
-];
-
-const apiMobile: Skill[] = [
-	{ name: "Postman", level: "Proficient" },
-	{ name: "Play Console", level: "Expert" },
-	{ name: "App Store Connect", level: "Expert" },
 ];
 
 const projectManagement: Skill[] = [
@@ -208,32 +173,20 @@ export const Skills = () => {
 					<SkillCard icon="🎯" title="Core expertise" skills={coreExpertise} />
 					<SkillCard
 						icon="🧪"
-						title="Testing frameworks"
-						skills={testingFrameworks}
+						title="Tools & testing"
+						skills={toolsAndTesting}
 					/>
 					<SkillCard
 						icon="☁️"
 						title="Cloud & monitoring"
 						skills={cloudMonitoring}
 					/>
-					<SkillCard icon="📱" title="API & mobile" skills={apiMobile} />
 					<SkillCard
 						icon="📋"
 						title="Project management"
 						skills={projectManagement}
 					/>
 				</SkillsGrid>
-				<Legend>
-					<LegendItem>
-						<LegendDot $level="Expert" /> Expert
-					</LegendItem>
-					<LegendItem>
-						<LegendDot $level="Proficient" /> Proficient
-					</LegendItem>
-					<LegendItem>
-						<LegendDot $level="Familiar" /> Familiar
-					</LegendItem>
-				</Legend>
 			</Container>
 		</SectionBlock>
 	);
