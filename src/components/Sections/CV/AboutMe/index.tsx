@@ -42,8 +42,8 @@ export const AboutMe = () => {
 				<AboutMeParagraph>
 					I'm a Senior QA Engineer with 10 years of experience building quality
 					into products - from Sky's streaming infrastructure to ProntoPro's
-					test tooling. Curious by nature, I care deeply about how things work
-					and why they break.
+					product. Curious by nature, I care deeply about how things work and
+					why they break.
 				</AboutMeParagraph>
 				<AboutMeParagraph>
 					Outside of work, I spend my time capturing the world through
