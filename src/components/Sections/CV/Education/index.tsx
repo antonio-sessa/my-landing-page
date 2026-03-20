@@ -16,46 +16,22 @@ const EducationGrid = styled(Grid)`
   }
 `;
 
-const EducationCard = styled(Card)`
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.5rem;
-`;
-
-const EducationCardHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 1rem;
-`;
-
-const TitleGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-`;
-
-const GradeBadge = styled.div`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+const GradeBadge = styled(Badge)`
   background: rgba(34, 197, 94, 0.12);
   border: 1px solid rgba(34, 197, 94, 0.25);
   color: #4ade80;
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.3rem 0.75rem;
-  border-radius: 999px;
-  width: fit-content;
 `;
 
-const Divider = styled.hr`
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  margin: 0;
+const BadgeRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
 `;
 
 const ThesisLabel = styled.span`
@@ -76,6 +52,13 @@ const ThesisText = styled.p`
   margin: 0;
 `;
 
+const Divider = styled.hr`
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 0.5rem 0;
+  width: 100%;
+`;
+
 export const Education = () => {
 	return (
 		<SectionBlock id="education">
@@ -83,15 +66,13 @@ export const Education = () => {
 				<SectionTitle>Education</SectionTitle>
 
 				<EducationGrid>
-					<EducationCard>
-						<EducationCardHeader>
-							<TitleGroup>
-								<CardTitle>Master's Degree in Computer Engineering</CardTitle>
-								<CardSubtitle>University of Salerno</CardSubtitle>
-							</TitleGroup>
+					<Card>
+						<CardTitle>Master's Degree in Computer Engineering</CardTitle>
+						<CardSubtitle>University of Salerno</CardSubtitle>
+						<BadgeRow>
 							<Badge>2013 – 2015</Badge>
-						</EducationCardHeader>
-						<GradeBadge>🎓 110 / 110</GradeBadge>
+							<GradeBadge>110 / 110</GradeBadge>
+						</BadgeRow>
 						<Divider />
 						<div>
 							<ThesisLabel>Thesis</ThesisLabel>
@@ -99,17 +80,15 @@ export const Education = () => {
 								Graph matching algorithms for Social Network Analysis
 							</ThesisText>
 						</div>
-					</EducationCard>
+					</Card>
 
-					<EducationCard>
-						<EducationCardHeader>
-							<TitleGroup>
-								<CardTitle>Bachelor's Degree in Computer Engineering</CardTitle>
-								<CardSubtitle>University of Salerno</CardSubtitle>
-							</TitleGroup>
+					<Card>
+						<CardTitle>Bachelor's Degree in Computer Engineering</CardTitle>
+						<CardSubtitle>University of Salerno</CardSubtitle>
+						<BadgeRow>
 							<Badge>2008 – 2013</Badge>
-						</EducationCardHeader>
-						<GradeBadge>🎓 99 / 110</GradeBadge>
+							<GradeBadge>99 / 110</GradeBadge>
+						</BadgeRow>
 						<Divider />
 						<div>
 							<ThesisLabel>Thesis</ThesisLabel>
@@ -118,7 +97,7 @@ export const Education = () => {
 								community using SNA techniques
 							</ThesisText>
 						</div>
-					</EducationCard>
+					</Card>
 				</EducationGrid>
 			</Container>
 		</SectionBlock>
