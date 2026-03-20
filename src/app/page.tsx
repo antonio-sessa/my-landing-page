@@ -12,6 +12,7 @@ import { Hero } from "../components/Sections/Landing/Hero";
 import { LineBreaker } from "../components/Sections/Landing/LineBreaker";
 import { Links } from "../components/Sections/Landing/Links";
 import { ReadingListAccessEdge } from "../components/Sections/Landing/ReadingListAccessEdge";
+import { Photography } from "../components/Sections/Photography";
 import { getBaseUrl } from "../lib/getBaseUrl";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -49,6 +50,7 @@ export default function Home() {
 			</Landing>
 			<Content>
 				<AboutMe />
+				<Photography />
 				<Experience />
 				<Education />
 				<Skills />
