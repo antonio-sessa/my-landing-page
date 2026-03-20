@@ -1,7 +1,6 @@
 "use client";
 
 import styled from "styled-components";
-import { Link } from "../../../Typography/Link";
 import Paragraph from "../../../Typography/Paragraph";
 import Container from "../../../UI/Container";
 import SectionBlock from "../../../UI/SectionBlock";
@@ -47,15 +46,8 @@ export const AboutMe = () => {
 					and why they break.
 				</AboutMeParagraph>
 				<AboutMeParagraph>
-					Outside of work, I spend my time{" "}
-					<Link
-						href="https://unsplash.com/it/@antony_sex"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						capturing the world through photography
-					</Link>{" "}
-					and exploring the world of personal finance.
+					Outside of work, I spend my time capturing the world through
+					photography and exploring the world of personal finance.
 				</AboutMeParagraph>
 			</AboutMeContainer>
 		</AboutMeSectionBlock>
