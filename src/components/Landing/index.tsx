@@ -16,7 +16,6 @@ export const LandingWrapper = styled.section`
   text-align: center;
   overflow: hidden;
 
-  /* Preserve your responsive paddings */
   padding-top: 70vh;
 
   @media (max-width: 1120px) {
@@ -35,7 +34,6 @@ export const LandingWrapper = styled.section`
     padding-top: 34vh;
   }
 
-  /* Stack children above background */
   > * {
     position: relative;
     z-index: 1;
@@ -47,6 +45,19 @@ const Background = styled.div`
   inset: 0;
   z-index: 0;
   pointer-events: none;
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
 `;
 
 export const Landing = ({ children }: PropsWithChildren) => {
@@ -62,6 +73,7 @@ export const Landing = ({ children }: PropsWithChildren) => {
 					style={{ objectFit: "cover" }}
 				/>
 			</Background>
+			<Overlay />
 			{children}
 		</LandingWrapper>
 	);
