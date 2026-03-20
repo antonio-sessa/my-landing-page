@@ -34,6 +34,12 @@ const JobPositionInfo = styled.div`
   gap: 0.25rem;
 `;
 
+const NarrativeText = styled.p`
+  margin: 0 0 0.75rem 0;
+  line-height: 1.75;
+  font-size: 0.95rem;
+`;
+
 export const Experience = () => {
 	return (
 		<SectionBlock id="experience">
@@ -45,7 +51,6 @@ export const Experience = () => {
 						<ExperienceCardHeader>
 							<JobPositionInfo>
 								<CardTitle>Senior QA Engineer</CardTitle>
-
 								<CompanyLogo
 									src="/media/logos/prontopro.webp"
 									alt="ProntoPro S.r.l."
@@ -54,39 +59,32 @@ export const Experience = () => {
 							</JobPositionInfo>
 							<Badge>Jan 2024 - Present</Badge>
 						</ExperienceCardHeader>
+						<NarrativeText>
+							Promoted to{" "}
+							<Link
+								href="https://homeruntech.notion.site/Career-Path-a52844ab8ee34c87a24fd8759b701e12"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Mark>Senior Engineer S2</Mark>
+							</Link>
+							, I now sit at the intersection of product, engineering, and
+							reliability — contributing to both technical and product roadmaps
+							and acting as a bridge between Customer Care and Engineering.
+						</NarrativeText>
 						<List>
 							<ListItem>
-								Currently <Mark>Senior Engineer S2</Mark>, accordingly to this{" "}
-								<Link
-									href="https://homeruntech.notion.site/Career-Path-a52844ab8ee34c87a24fd8759b701e12"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									Career Path
-								</Link>
+								Built a <Mark>Company Status Page</Mark> for real-time system
+								health monitoring, reducing incident response time
 							</ListItem>
 							<ListItem>
-								<Mark>Support Product and technical roadmaps definition</Mark>
+								Developed a <Mark>TypeScript toolkit</Mark> to generate test
+								scenarios at scale, orchestrated in <Mark>AWS Lambda</Mark> and
+								monitored via <Mark>CloudWatch + Slack</Mark>
 							</ListItem>
 							<ListItem>
-								Implementation of a <Mark>Company Status Page</Mark> to manage
-								and monitor alerts
-							</ListItem>
-							<ListItem>
-								Experience with working with highly scalable, maintainable code
-							</ListItem>
-							<ListItem>
-								Development of a <Mark>toolkit in Typescript</Mark> to generate
-								test scenarios, <Mark>orchestrated in AWS Lambda</Mark> and
-								<Mark>monitored via CloudWatch + Slack</Mark>
-							</ListItem>
-							<ListItem>
-								Experience with <Mark>GitHub Actions</Mark> and containerised
-								environment (Docker)
-							</ListItem>
-							<ListItem>
-								Dialogue with Customer Care and Customer Experience teams, to
-								provide mitigations and report bugs to the Engineering team
+								Hands-on with <Mark>GitHub Actions</Mark> and containerised
+								environments (Docker)
 							</ListItem>
 						</List>
 					</ExperienceCard>
@@ -95,7 +93,6 @@ export const Experience = () => {
 						<ExperienceCardHeader>
 							<JobPositionInfo>
 								<CardTitle>QA Engineer</CardTitle>
-
 								<CompanyLogo
 									src="/media/logos/prontopro.webp"
 									alt="ProntoPro S.r.l."
@@ -104,29 +101,30 @@ export const Experience = () => {
 							</JobPositionInfo>
 							<Badge>May 2022 - Dec 2023</Badge>
 						</ExperienceCardHeader>
+						<NarrativeText>
+							I joined ProntoPro to bring quality upstream, adopting a{" "}
+							<Link
+								href="https://basecamp.com/shapeup"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Mark>Shift-Left approach</Mark>
+							</Link>{" "}
+							that involves QA from the design stage, not just at the end of a
+							sprint.
+						</NarrativeText>
 						<List>
 							<ListItem>
-								<Link
-									href="https://basecamp.com/shapeup"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<Mark>Shift-Left approach</Mark>
-								</Link>{" "}
-								to ensure consistency and solidity of applications during new
-								features design processes
+								Active participation in backlog refinement to catch ambiguities
+								early
 							</ListItem>
 							<ListItem>
-								Active participation to backlog refining process
+								<Mark>Validation and verification</Mark> of new features
+								developed
 							</ListItem>
 							<ListItem>
-								<Mark>
-									Validation and verification of new features developed
-								</Mark>
-							</ListItem>
-							<ListItem>
-								Design and coding of an <Mark>automated e2e test suite</Mark>
-								(Cypress/WebdriverIO)
+								Designed and coded an <Mark>automated e2e test suite</Mark>{" "}
+								using Cypress and WebdriverIO
 							</ListItem>
 						</List>
 					</ExperienceCard>
@@ -135,7 +133,6 @@ export const Experience = () => {
 						<ExperienceCardHeader>
 							<JobPositionInfo>
 								<CardTitle>QA Test Lead and Business Analyst</CardTitle>
-
 								<CompanyLogo
 									src="/media/logos/sky.webp"
 									alt="Sky Italia S.r.l."
@@ -144,29 +141,28 @@ export const Experience = () => {
 							</JobPositionInfo>
 							<Badge>Jan 2017 - May 2022</Badge>
 						</ExperienceCardHeader>
+						<NarrativeText>
+							Over five years at Sky, I grew from individual contributor to{" "}
+							<Mark>team lead</Mark>, managing a group of manual testers while
+							owning the broader quality strategy across product and
+							engineering.
+						</NarrativeText>
 						<List>
 							<ListItem>
-								<Mark>Monitoring a manual testers group</Mark>
+								Functional tests design, use cases development and{" "}
+								<Mark>activities cost estimation</Mark>
 							</ListItem>
 							<ListItem>
-								Functional tests design and use cases development
+								Worked closely with POs to align quality goals with the final
+								Customer Experience
 							</ListItem>
 							<ListItem>
-								<Mark>Activities cost estimation</Mark> - both man-days and
-								equipment
+								Managed <Mark>Field Trial feedback</Mark> from real users and
+								fed insights back into the product cycle
 							</ListItem>
 							<ListItem>
-								Process management, analysis and validation results export
-							</ListItem>
-							<ListItem>
-								Exchanges with PO about final Customer Experience
-							</ListItem>
-							<ListItem>
-								Verification and analysis management of Field Trial feedbacks
-							</ListItem>
-							<ListItem>
-								<Mark>Supporting Incident Management activities</Mark> coming
-								from Sky Go Real Customers
+								<Mark>Supported Incident Management</Mark> for Sky Go's live
+								customer base
 							</ListItem>
 						</List>
 					</ExperienceCard>
@@ -175,7 +171,6 @@ export const Experience = () => {
 						<ExperienceCardHeader>
 							<JobPositionInfo>
 								<CardTitle>QA Test Engineer</CardTitle>
-
 								<CompanyLogo
 									src="/media/logos/sky.webp"
 									alt="Sky Italia S.r.l."
@@ -184,12 +179,13 @@ export const Experience = () => {
 							</JobPositionInfo>
 							<Badge>Sep 2015 - Jan 2017</Badge>
 						</ExperienceCardHeader>
-						<List>
-							<ListItem>
-								Software validation and verification of satellite transmission
-								devices, using Agile methodology.
-							</ListItem>
-						</List>
+						<NarrativeText>
+							My professional starting point: validating and verifying satellite
+							transmission devices in an <Mark>Agile</Mark> environment. This
+							role gave me a rigorous foundation in structured software testing
+							and taught me to work methodically under delivery pressure — a
+							mindset I've carried through every role since.
+						</NarrativeText>
 					</ExperienceCard>
 				</CardList>
 			</Container>
