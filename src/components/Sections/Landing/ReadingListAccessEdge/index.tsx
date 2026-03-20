@@ -50,7 +50,9 @@ const EdgeCard = styled.div<EdgeCardProps>`
     transform 0.5s ease,
     max-width 0.5s ease,
     width 0.5s ease,
-    border-radius 0.5s ease;
+    border-radius 0.5s ease,
+    box-shadow 200ms ease,
+    scale 200ms ease;
   display: flex;
   align-items: center;
   justify-content: ${({ $collapsed }) =>
@@ -68,6 +70,17 @@ const EdgeCard = styled.div<EdgeCardProps>`
   width: ${({ $collapsed }) => ($collapsed ? "3rem" : "200px")};
   max-width: ${({ $collapsed }) => ($collapsed ? "3rem" : "200px")};
   height: 3rem;
+
+  &:hover {
+    box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.7);
+    scale: 1.08;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:hover {
+      scale: 1;
+    }
+  }
 
   @media (max-width: 768px) {
     bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
