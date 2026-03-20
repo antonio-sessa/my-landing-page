@@ -35,25 +35,27 @@ export const AboutMe = () => {
 			<AboutMeContainer>
 				<AboutMeParagraph>
 					<em>
-						“Give me a lever, a place to stand and well-done investigation, and
-						I will move the earth.”
+						"Give me a lever, a place to stand and well-done investigation, and
+						I will move the earth."
 					</em>{" "}
-					- Archimedes’ semi-cit.
+					- Archimedes' semi-cit.
 				</AboutMeParagraph>
 				<AboutMeParagraph>
-					I was born as tireless curious. I’m a proactive guy, used to knowledge
-					sharing and receiving feedbacks (whether positive or negative).
+					I'm a Senior QA Engineer with 10 years of experience building quality
+					into products — from Sky's streaming infrastructure to ProntoPro's
+					test tooling. Curious by nature, I care deeply about how things work
+					and why they break.
 				</AboutMeParagraph>
 				<AboutMeParagraph>
-					In my spare time I enjoy{" "}
+					Outside of work, I spend my time{" "}
 					<Link
 						href="https://unsplash.com/it/@antony_sex"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						capturing
+						capturing the world through photography
 					</Link>{" "}
-					the beauty around me, and deep dive in the world of personal finance.
+					and exploring the world of personal finance.
 				</AboutMeParagraph>
 			</AboutMeContainer>
 		</AboutMeSectionBlock>

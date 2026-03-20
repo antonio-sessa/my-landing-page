@@ -11,6 +11,14 @@ import Grid from "../../../UI/Grid";
 import Icon from "../../../UI/Icon";
 import SectionBlock from "../../../UI/SectionBlock";
 
+const SkillsGrid = styled(Grid)`
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+`;
+
 const SkillsCard = styled(Card)`
   text-align: left;
   overflow: hidden;
@@ -26,8 +34,8 @@ const SkillsCardTitle = styled(CardTitle)`
 
 const SkillsIcon = styled(Icon)`
   font-size: 1.25rem;
-  margin: 0; 
-  flex-shrink: 0;  
+  margin: 0;
+  flex-shrink: 0;
 `;
 
 export const Skills = () => {
@@ -36,63 +44,48 @@ export const Skills = () => {
 			<Container>
 				<SectionTitle>Skills & Expertise</SectionTitle>
 
-				<Grid>
+				<SkillsGrid>
 					<SkillsCard>
 						<SkillsCardTitle>
-							<SkillsIcon>🧪</SkillsIcon> Hard skills
+							<SkillsIcon>🧪</SkillsIcon> Core expertise
 						</SkillsCardTitle>
 
 						<BadgeGroup align="left">
-							<Badge highlighted>Debugging</Badge>
+							<Badge highlighted>Manual & Automated testing</Badge>
+							<Badge highlighted>Regression testing</Badge>
+							<Badge highlighted>Acceptance testing</Badge>
+							<Badge highlighted>Defect & bug management</Badge>
 							<Badge>Requirements analysis</Badge>
+							<Badge>Debugging</Badge>
+							<Badge>Reporting & KPIs</Badge>
 							<Badge>Testbook management</Badge>
-							<Badge highlighted>Defect and bug management</Badge>
-							<Badge>Reporting and KPIs</Badge>
 							<Badge>User experience</Badge>
-							<Badge highlighted>Manual and Automated tests</Badge>
-							<Badge highlighted>No Regression tests</Badge>
-							<Badge highlighted>Acceptance tests</Badge>
 						</BadgeGroup>
 					</SkillsCard>
 
 					<SkillsCard>
 						<SkillsCardTitle>
-							<SkillsIcon>🧪</SkillsIcon> Soft skills
+							<SkillsIcon>💻</SkillsIcon> Tools & technologies
 						</SkillsCardTitle>
 
 						<BadgeGroup align="left">
-							<Badge highlighted>Teamwork</Badge>
-							<Badge>Problem Solving</Badge>
-							<Badge highlighted>Adaptability</Badge>
-							<Badge highlighted>Critical thinking</Badge>
-							<Badge>Emotional Intelligence</Badge>
-							<Badge>Time management</Badge>
-						</BadgeGroup>
-					</SkillsCard>
-
-					<SkillsCard>
-						<SkillsCardTitle>
-							<SkillsIcon>💻</SkillsIcon> Used technologies
-						</SkillsCardTitle>
-
-						<BadgeGroup align="left">
+							<Badge highlighted>Cypress</Badge>
+							<Badge highlighted>WebdriverIO</Badge>
+							<Badge highlighted>TypeScript</Badge>
+							<Badge highlighted>AWS Lambda</Badge>
+							<Badge highlighted>CloudWatch</Badge>
+							<Badge highlighted>Datadog</Badge>
+							<Badge>Postman</Badge>
+							<Badge>Play Console</Badge>
+							<Badge>App Store Connect</Badge>
+							<Badge>Jira</Badge>
+							<Badge>Confluence</Badge>
 							<Badge>Asana</Badge>
 							<Badge>Figma</Badge>
 							<Badge>Miro</Badge>
-							<Badge>Datadog</Badge>
-							<Badge highlighted>Typescript</Badge>
-							<Badge>Postman</Badge>
-							<Badge highlighted>Cypress</Badge>
-							<Badge>WebdriverIO</Badge>
-							<Badge highlighted>AWS Lambda</Badge>
-							<Badge>CloudWatch</Badge>
-							<Badge highlighted>Play Console</Badge>
-							<Badge highlighted>App Store Connect</Badge>
-							<Badge>Jira</Badge>
-							<Badge>Confluence</Badge>
 						</BadgeGroup>
 					</SkillsCard>
-				</Grid>
+				</SkillsGrid>
 			</Container>
 		</SectionBlock>
 	);
