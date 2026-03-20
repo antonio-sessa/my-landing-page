@@ -71,7 +71,7 @@ export const Photography = () => {
 							ariaLabel={photo.alt_description ?? "Photo by Antonio Sessa"}
 						>
 							<Image
-								src={photo.urls.small}
+								src={photo.urls.regular}
 								alt={photo.alt_description ?? ""}
 								fill
 								sizes="(max-width: 700px) 50vw, 33vw"
