@@ -118,7 +118,7 @@ const coreExpertise: Skill[] = [
 const toolsAndTesting: Skill[] = [
 	{ name: "Cypress", level: "Proficient" },
 	{ name: "WebdriverIO", level: "Familiar" },
-	{ name: "Postman", level: "Proficient" },
+	{ name: "Postman", level: "Expert" },
 	{ name: "Play Console", level: "Expert" },
 	{ name: "App Store Connect", level: "Expert" },
 ];
