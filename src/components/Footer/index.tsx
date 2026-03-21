@@ -16,6 +16,14 @@ const CTAText = styled.p`
   color: #e5e7eb;
 `;
 
+const CTARow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+`;
+
 const LinkedInButton = styled(Link)`
   display: inline-block;
   padding: 0.6rem 1.5rem;
@@ -38,6 +46,24 @@ const LinkedInButton = styled(Link)`
   }
 `;
 
+const DownloadButton = styled.a`
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 200ms, color 200ms, border-color 200ms;
+  font-size: 0.95rem;
+
+  &:hover {
+    border-color: #e5e7eb;
+    color: #e5e7eb;
+    text-decoration: none;
+  }
+`;
+
 const Divider = styled.hr`
   border: none;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -56,12 +82,21 @@ export const Footer = () => {
 	return (
 		<FooterWrapper>
 			<CTAText>Want to get in touch?</CTAText>
-			<LinkedInButton
-				href="https://www.linkedin.com/in/antoniosessa/"
-				ariaLabel="Connect with Antonio Sessa on LinkedIn"
-			>
-				Connect on LinkedIn
-			</LinkedInButton>
+			<CTARow>
+				<LinkedInButton
+					href="https://www.linkedin.com/in/antoniosessa/"
+					ariaLabel="Connect with Antonio Sessa on LinkedIn"
+				>
+					Connect on LinkedIn
+				</LinkedInButton>
+				<DownloadButton
+					href="/media/cv/antoniosessa_CV.pdf"
+					download="antoniosessa_CV.pdf"
+					aria-label="Download Antonio Sessa's CV"
+				>
+					Download CV
+				</DownloadButton>
+			</CTARow>
 			<Divider />
 			<Meta>Coded with ♥ by Antonio Sessa · © {currentYear} · Milan, IT</Meta>
 		</FooterWrapper>
