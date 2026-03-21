@@ -104,39 +104,36 @@ const ProficiencyBadge = styled.span<{
 type Skill = { name: string; level: "Expert" | "Proficient" | "Familiar" };
 
 const coreExpertise: Skill[] = [
-	{ name: "Manual & Automated testing", level: "Expert" },
-	{ name: "Regression testing", level: "Expert" },
-	{ name: "Acceptance testing", level: "Expert" },
-	{ name: "Defect & bug management", level: "Expert" },
-	{ name: "Requirements analysis", level: "Expert" },
-	{ name: "Debugging", level: "Expert" },
-	{ name: "Reporting & KPIs", level: "Expert" },
-	{ name: "Testbook management", level: "Expert" },
-	{ name: "User experience", level: "Expert" },
+	{ name: "Quality strategy", level: "Expert" },
+	{ name: "Shift-Left implementation", level: "Expert" },
+	{ name: "Test architecture", level: "Expert" },
+	{ name: "Observability & monitoring", level: "Expert" },
+	{ name: "Cross-functional alignment", level: "Expert" },
+	{ name: "KPI definition & reporting", level: "Expert" },
 ];
 
 const toolsAndTesting: Skill[] = [
-	{ name: "Cypress", level: "Proficient" },
-	{ name: "WebdriverIO", level: "Familiar" },
-	{ name: "TypeScript", level: "Proficient" },
 	{ name: "Postman", level: "Expert" },
+	{ name: "Zapier", level: "Expert" },
 	{ name: "Play Console", level: "Expert" },
 	{ name: "App Store Connect", level: "Expert" },
-	{ name: "Zapier", level: "Expert" },
+	{ name: "TypeScript", level: "Proficient" },
+	{ name: "Cypress", level: "Proficient" },
+	{ name: "WebdriverIO", level: "Familiar" },
 ];
 
 const cloudMonitoring: Skill[] = [
+	{ name: "Datadog", level: "Expert" },
 	{ name: "AWS Lambda", level: "Proficient" },
 	{ name: "CloudWatch", level: "Proficient" },
-	{ name: "Datadog", level: "Expert" },
 ];
 
 const projectManagement: Skill[] = [
+	{ name: "Asana", level: "Expert" },
 	{ name: "Jira", level: "Proficient" },
 	{ name: "Confluence", level: "Proficient" },
-	{ name: "Asana", level: "Expert" },
-	{ name: "Figma", level: "Proficient" },
 	{ name: "Miro", level: "Expert" },
+	{ name: "Figma", level: "Proficient" },
 ];
 
 const SkillCard = ({

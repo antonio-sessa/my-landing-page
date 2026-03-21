@@ -83,8 +83,10 @@ export const Experience = () => {
 								monitored via <Mark>CloudWatch + Slack</Mark>
 							</ListItem>
 							<ListItem>
-								Hands-on with <Mark>GitHub Actions</Mark> and containerised
-								environments (Docker)
+								Embedded quality from inception through a{" "}
+								<Mark>full Angular to React and React Native replatform</Mark>,
+								translating early design-phase involvement into a
+								zero-regression delivery at scale.
 							</ListItem>
 						</List>
 					</ExperienceCard>
