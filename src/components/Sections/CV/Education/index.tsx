@@ -42,6 +42,7 @@ const ThesisLabel = styled.span`
   opacity: 0.4;
   display: block;
   margin-bottom: 0.25rem;
+  text-align: left;
 `;
 
 const ThesisText = styled.p`
@@ -50,6 +51,15 @@ const ThesisText = styled.p`
   line-height: 1.6;
   font-style: italic;
   margin: 0;
+  text-align: left
+`;
+
+const ThesisContext = styled.p`
+  font-size: 0.8rem;
+  opacity: 0.55;
+  line-height: 1.6;
+  margin: 0.5rem 0 0;
+  text-align: left
 `;
 
 const Divider = styled.hr`
@@ -79,6 +89,12 @@ export const Education = () => {
 							<ThesisText>
 								Graph matching algorithms for Social Network Analysis
 							</ThesisText>
+							<ThesisContext>
+								Designed a synthetic dataset to benchmark graph matching
+								algorithms on complex networks - an early exercise in structured
+								test design, performance evaluation, and analytical rigour that
+								directly anticipated the QA mindset I've built my career on.
+							</ThesisContext>
 						</div>
 					</Card>
 
@@ -93,9 +109,16 @@ export const Education = () => {
 						<div>
 							<ThesisLabel>Thesis</ThesisLabel>
 							<ThesisText>
-								Searching for relationships between users in a learning
-								community using SNA techniques
+								Relationships between users in learning communities using SNA
+								techniques
 							</ThesisText>
+							<ThesisContext>
+								Built a custom SimilarityScore index to quantify relationships
+								between users on a learning platform, then validated it against
+								existing literature benchmarks - an early exercise in defining
+								measurable criteria, designing validation strategies, and
+								evaluating results against real-world alternatives.
+							</ThesisContext>
 						</div>
 					</Card>
 				</EducationGrid>
