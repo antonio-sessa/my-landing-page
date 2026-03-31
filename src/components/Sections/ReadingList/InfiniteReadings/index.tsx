@@ -103,15 +103,21 @@ export default function InfiniteReadings({
 
 	return (
 		<>
-			<FilterBar
-				months={months}
-				statuses={statuses}
-				selectedMonth={selectedMonth}
-				selectedStatus={selectedStatus}
-				onMonthChange={setSelectedMonth}
-				onStatusChange={setSelectedStatus}
+			<ReadingList
+				readings={filteredReadings}
+				filterBar={
+					<FilterBar
+						months={months}
+						statuses={statuses}
+						selectedMonth={selectedMonth}
+						selectedStatus={selectedStatus}
+						onMonthChange={setSelectedMonth}
+						onStatusChange={setSelectedStatus}
+						filteredCount={filteredReadings.length}
+						totalCount={readings.length}
+					/>
+				}
 			/>
-			<ReadingList readings={filteredReadings} />
 			{hasMore && <div ref={loaderRef} style={{ height: "2rem" }} />}
 			{loading && (
 				<div
