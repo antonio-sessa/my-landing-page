@@ -10,7 +10,7 @@ interface FetchOptions {
 }
 
 export async function fetchReadingList({
-	pageSize = 5,
+	pageSize = 50,
 	startCursor,
 }: FetchOptions = {}): Promise<{
 	readings: Reading[];
