@@ -13,7 +13,12 @@ import SectionBlock from "../../../UI/SectionBlock";
 
 interface ReadingListProps {
 	readings: Reading[];
+	filterBar?: React.ReactNode;
 }
+
+const ReadingListTitle = styled(SectionTitle)`
+  margin-bottom: 1.5rem;
+`;
 
 const ReadingGrid = styled(Grid)`
   grid-template-columns: 1fr;
@@ -31,7 +36,7 @@ const ReadingItemCard = styled(Card)`
   flex-direction: column;
   gap: 0.25rem;
   align-items: flex-start;
-  min-height: 120px; 
+  min-height: 120px;
   box-sizing: border-box;
 `;
 
@@ -39,12 +44,12 @@ const Summary = styled(Paragraph)`
   white-space: pre-wrap;
 `;
 
-export const ReadingList = ({ readings }: ReadingListProps) => {
+export const ReadingList = ({ readings, filterBar }: ReadingListProps) => {
 	return (
 		<SectionBlock id="reading-list">
 			<Container>
-				<SectionTitle>📚 Reading List</SectionTitle>
-
+				<ReadingListTitle>📚 Reading List</ReadingListTitle>
+				{filterBar}
 				<ReadingGrid>
 					{readings.map((book) => {
 						const formattedDate = book.createdAt
