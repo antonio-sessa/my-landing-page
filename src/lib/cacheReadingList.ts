@@ -7,7 +7,7 @@ const ONE_DAY = 60 * 60 * 24;
 
 export async function getCachedReadingListBatch({
 	startCursor,
-	pageSize = 5,
+	pageSize = 50,
 }: {
 	startCursor?: string;
 	pageSize?: number;
