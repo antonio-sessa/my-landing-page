@@ -1,10 +1,11 @@
 import type { ApiResponse } from "../types/apiResponse";
 import { fetchReadingList } from "./fetchReadingList";
 import { getCached } from "./getCached";
+import { READING_LIST_PAGE_SIZE } from "./readingListConfig";
 
 export async function getCachedReadingListBatch({
 	startCursor,
-	pageSize = 50,
+	pageSize = READING_LIST_PAGE_SIZE,
 }: {
 	startCursor?: string;
 	pageSize?: number;
