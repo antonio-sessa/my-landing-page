@@ -32,7 +32,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ReadingListPage() {
 	const batch = await getCachedReadingListBatch({
 		startCursor: undefined,
-		pageSize: 50,
 	});
 
 	return (

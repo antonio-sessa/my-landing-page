@@ -10,7 +10,6 @@ export async function GET(request: Request) {
 
 		const batch = await getCachedReadingListBatch({
 			startCursor,
-			pageSize: 50,
 		});
 
 		return NextResponse.json(batch);

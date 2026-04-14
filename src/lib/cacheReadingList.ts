@@ -1,37 +1,30 @@
-import { Redis } from "@upstash/redis";
 import type { ApiResponse } from "../types/apiResponse";
 import { fetchReadingList } from "./fetchReadingList";
-
-const redis = Redis.fromEnv();
-const ONE_DAY = 60 * 60 * 24;
+import { getCached } from "./getCached";
+import { READING_LIST_PAGE_SIZE } from "./readingListConfig";
 
 export async function getCachedReadingListBatch({
 	startCursor,
-	pageSize = 50,
+	pageSize = READING_LIST_PAGE_SIZE,
 }: {
 	startCursor?: string;
 	pageSize?: number;
 }): Promise<ApiResponse> {
-	const cacheKey = startCursor ? `readings:${startCursor}` : `readings:first`;
+	const cacheKey = startCursor ? `readings:${startCursor}` : "readings:first";
 
-	let batch: ApiResponse | null = await redis.get(cacheKey);
+	return getCached<ApiResponse>({
+		key: cacheKey,
+		fetcher: async () => {
+			const { readings, hasMore, nextCursor } = await fetchReadingList({
+				pageSize,
+				startCursor,
+			});
 
-	if (!batch) {
-		const { readings, hasMore, nextCursor } = await fetchReadingList({
-			pageSize,
-			startCursor,
-		});
-
-		batch = {
-			readings,
-			hasMore,
-			nextCursor: nextCursor ?? null,
-		};
-
-		await redis.set(cacheKey, batch, { ex: ONE_DAY });
-		console.log(`[API] Cached new batch: ${cacheKey}`);
-	} else {
-		console.log(`[API] Loaded from cache: ${cacheKey}`);
-	}
-	return batch;
+			return {
+				readings,
+				hasMore,
+				nextCursor: nextCursor ?? null,
+			};
+		},
+	});
 }
