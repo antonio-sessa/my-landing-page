@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Content } from "../../components/Content";
 import { Footer } from "../../components/Footer";
+import { ReadingListNav } from "../../components/Navigation/ReadingListNav";
 import InfiniteReadings from "../../components/Sections/ReadingList/InfiniteReadings";
-import { ReadingListHeader } from "../../components/Sections/ReadingList/ReadingListHeader";
 import { getCachedReadingListBatch } from "../../lib/cacheReadingList";
 import { getBaseUrl } from "../../lib/getBaseUrl";
 
@@ -37,7 +37,7 @@ export default async function ReadingListPage() {
 
 	return (
 		<>
-			<ReadingListHeader />
+			<ReadingListNav />
 			<Content>
 				<InfiniteReadings
 					initialReadings={batch.readings}
