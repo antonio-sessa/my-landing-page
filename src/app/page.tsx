@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Content } from "../components/Content";
 import { Footer } from "../components/Footer";
 import { Landing } from "../components/Landing";
+import { HomeNav } from "../components/Navigation/HomeNav";
 import { AboutMe } from "../components/Sections/CV/AboutMe";
 import { Certifications } from "../components/Sections/CV/Certifications";
 import { Education } from "../components/Sections/CV/Education";
@@ -41,6 +42,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Home() {
 	return (
 		<>
+			<HomeNav />
 			<Landing>
 				<Hero />
 				<LineBreaker />

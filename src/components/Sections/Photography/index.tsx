@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import type { UnsplashPhoto } from "../../../lib/fetchUnsplashPhotos";
+import type { UnsplashPhoto } from "../../../types/unsplashPhoto";
 import { Link } from "../../Typography/Link";
 import SectionTitle from "../../Typography/SectionTitle";
 import Container from "../../UI/Container";
