@@ -1,5 +1,6 @@
 import { Redis } from "@upstash/redis";
-import { fetchUnsplashPhotos, type UnsplashPhoto } from "./fetchUnsplashPhotos";
+import type { UnsplashPhoto } from "../types/unsplashPhoto";
+import { fetchUnsplashPhotos } from "./fetchUnsplashPhotos";
 
 const redis = Redis.fromEnv();
 const ONE_DAY = 60 * 60 * 24;
